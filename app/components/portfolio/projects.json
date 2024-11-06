@@ -1,0 +1,88 @@
+[
+  {
+    "name": "WeatherTracks",
+    "description": "WeatherTracks is a web application that generates a Spotify Playlist based on their location's weather. WeatherTracks uses the console-oriented weather forecast service, wttr.in.",
+    "features": [
+      "Design",
+      "API Integration",
+      "JavaScript/Gatsby Development"
+    ],
+    "image": "/projects/weathertracks.png"
+  },
+  {
+    "name": "Craft Brew",
+    "description": "Craft Brew is a prototype web application that allows users to search for breweries by city and state. Users can also view details about each brewery, including the brewery's name, address, phone number, and website.",
+    "features": [
+      "Design",
+      "Craft CMS Development"
+    ],
+    "image": "/projects/craft-brew.jpg"
+  },
+  {
+    "name": "Program Services",
+    "description": "Program Services is a Ruby on Rails application that provides quality continuing education courses for mental health professionals.",
+    "features": [
+      "Design",
+      "Participatory Ruby on Rails Development"
+    ],
+    "image": "/projects/program-services.jpg"
+  },
+  {
+    "name": "Henco Reprographics",
+    "description": "Henco Reprographics is a WordPress website that provides information on printing and reprographics services.",
+    "features": [
+      "Design",
+      "WordPress Development"
+    ],
+    "image": "/projects/hencoreprographics.jpg"
+  },
+  {
+    "name": "Climate Resilience Map",
+    "description": "Climate Resilience Map is a vanilla JavaScript-based application that provides information on climate resilience offices and territories within the United States.",
+    "features": [
+      "Design",
+      "JavaScript Development",
+      "API Integration",
+      "Drupal 7 Development"
+    ],
+    "image": "/projects/climate-resilience-map.jpg"
+  },
+  {
+    "name": "Sign The Climate Agreement",
+    "description": "Sign The Climate Agreement was a Drupal 7 website that allowed users to sign a petition to support the Paris Climate Agreement and share to a user's desired social platform.",
+    "features": [
+      "Design",
+      "API Integration",
+      "Participatory Drupal 7 development"
+    ],
+    "image": "/projects/signtheagreement.jpg"
+  },
+  {
+    "name": "Trinity United Methodist Church",
+    "description": "Trinity United Methodist Church is a Drupal 7 website that provides information on the church's services and events.",
+    "features": [
+      "Design",
+      "Full-service Branding",
+      "Drupal 7 Development"
+    ],
+    "image": "/projects/trinitywavl.jpg"
+  },
+  {
+    "name": "Hogue Furniture Design",
+    "description": "Hogue Furniture Design was a Drupal 7 website that provides information on the company's furniture design services and products.",
+    "features": [
+      "Design Implementation",
+      "Drupal 7 Development"
+    ],
+    "image": "/projects/hoguesf.jpg"
+  },
+  {
+    "name": "Deerwood Homeowners Association",
+    "description": "Deerwood Homeowners Association was a WordPress website that provided information on the association's services and events.",
+    "features": [
+      "Design",
+      "WordPress Development"
+    ],
+    "image": "/projects/deerwood.jpg"
+  }
+]
