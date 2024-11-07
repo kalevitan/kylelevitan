@@ -1,14 +1,20 @@
 // components/Menu.tsx
 import React from "react";
+import Link from 'next/link';
 
 const Menu: React.FC = () => {
   return (
     <div className="menu pt-4">
       <ul className="grid grid-cols-4 gap-3 max-w-64">
         <li>
-          <a href="/Online-Levitan-Resume-2024.pdf" rel="noreferrer" title="See my resume" target="_blank">
+          <Link
+            href="/Online-Levitan-Resume-2024.pdf"
+            rel="noreferrer"
+            title="See my resume"
+            target="_blank"
+          >
             <i className="lni lni-id-card" aria-hidden="true"></i><div className="sr-only">resume</div>
-          </a>
+          </Link>
         </li>
         <li>
           <a href="mailto:levitan@gmail.com" rel="noreferrer" title="Send me an email" target="_blank">
