@@ -22,7 +22,7 @@ const Credentials: React.FC = () => {
           {`Clearly this is a list of several different languages, technologies, and frameworks. Truthfully, I've dabbled with them all, however, some more extensively than others. The point here is that I love learning and playing with new ways to code. It simply boils down to what's right for the project.`}
         </p>
       </div>
-      <div className="credentials__content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="credentials__content grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {credentials.credentials.map((credential) => (
           <div className="credentials__list" key={credential.category}>
             <h3>{credential.category}</h3>
