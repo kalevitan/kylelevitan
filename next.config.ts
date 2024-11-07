@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  distDir: 'build',
+  output: 'export',
   experimental: {
     optimizePackageImports: ['swiper', 'lineicons'],
   }
