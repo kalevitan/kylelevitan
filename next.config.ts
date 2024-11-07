@@ -5,7 +5,10 @@ const nextConfig: NextConfig = {
   output: 'export',
   experimental: {
     optimizePackageImports: ['swiper', 'lineicons'],
-  }
+  },
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
