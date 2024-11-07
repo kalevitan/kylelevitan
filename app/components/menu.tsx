@@ -6,7 +6,7 @@ const Menu: React.FC = () => {
     <div className="menu pt-4">
       <ul className="grid grid-cols-4 gap-3 max-w-64">
         <li>
-          <a href="/Levitan-Resume-2024.pdf" rel="noreferrer" title="See my resume" target="_blank">
+          <a href="/Online-Levitan-Resume-2024.pdf" rel="noreferrer" title="See my resume" target="_blank">
             <i className="lni lni-id-card" aria-hidden="true"></i><div className="sr-only">resume</div>
           </a>
         </li>
