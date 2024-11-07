@@ -94,6 +94,10 @@ i.lni {
   font-size: 1.2rem;
 }
 
+.credentials__content i.lni {
+  color: inherit;
+}
+
 header,
 footer {
   i.lni {
