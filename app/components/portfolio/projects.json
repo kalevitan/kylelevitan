@@ -1,7 +1,7 @@
 [
   {
     "name": "WeatherTracks",
-    "description": "WeatherTracks is a web application that generates a Spotify Playlist based on their location's weather. WeatherTracks uses the console-oriented weather forecast service, wttr.in.",
+    "description": "WeatherTracks is a MVP that generates a list of Spotify Playlists based on a user location's weather. WeatherTracks uses the console-oriented weather forecast service, wttr.in.",
     "features": [
       "Design",
       "API Integration",
@@ -11,7 +11,7 @@
   },
   {
     "name": "Craft Brew",
-    "description": "Craft Brew is a prototype web application that allows users to search for breweries by city and state. Users can also view details about each brewery, including the brewery's name, address, phone number, and website.",
+    "description": "Craft Brew was a prototype web application that allows users to search for breweries by city and state. Users can also view details about each brewery, including the brewery's name, address, phone number, and website.",
     "features": [
       "Design",
       "Craft CMS Development"
@@ -29,7 +29,7 @@
   },
   {
     "name": "Henco Reprographics",
-    "description": "Henco Reprographics is a WordPress website that provides information on printing and reprographics services.",
+    "description": "Henco Reprographics is a WordPress website that provides information on printing and reprography services.",
     "features": [
       "Design",
       "WordPress Development"
@@ -69,7 +69,7 @@
   },
   {
     "name": "Hogue Furniture Design",
-    "description": "Hogue Furniture Design was a Drupal 7 website that provides information on the company's furniture design services and products.",
+    "description": "Hogue Furniture Design was a Drupal 7 website that provided information on the company's furniture design services and products.",
     "features": [
       "Design Implementation",
       "Drupal 7 Development"
