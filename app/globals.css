@@ -34,7 +34,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-roboto-slab);
   text-transform: capitalize;
   color: var(--brand);
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 1.4;
 	margin-bottom: 1em;
 	margin-top: 1.5em;
@@ -42,7 +42,7 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0.67em 0;
   letter-spacing: .0365rem;
 
@@ -62,7 +62,7 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: .0325rem;
 }
 
@@ -89,6 +89,7 @@ a:focus {
 }
 
 i.lni {
+  color: var(--brand);
   padding: 5px;
   font-size: 1.2rem;
 }
@@ -142,23 +143,6 @@ footer {
     height: 100%;
     object-fit: cover;
     object-position: top;
-  }
-
-  &__slide {
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  &__details--wrapper {
-    padding: 3px 8px;
-  }
-
-  &__details {
-    li {
-      font-size: 1rem;
-    }
   }
 
   &:hover {
