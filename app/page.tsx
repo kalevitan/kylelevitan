@@ -27,9 +27,9 @@ export default function Home() {
           <Header/>
         </Section>
 
-        <Section title="portfolio">
+        {/* <Section title="portfolio">
           <Portfolio/>
-        </Section>
+        </Section> */}
 
         <Section title="credentials">
           <Credentials/>
