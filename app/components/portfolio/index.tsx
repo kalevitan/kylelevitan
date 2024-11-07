@@ -1,7 +1,6 @@
 // components/Portfolio/Index.tsx
 'use client';
 import React from 'react';
-// import Project from "./project";
 import dynamic from 'next/dynamic';
 import projects from "./projects.json"
 import { Swiper, SwiperSlide } from 'swiper/react';

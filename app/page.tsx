@@ -2,11 +2,9 @@ import Header from "./components/header";
 import Section from "./components/section"
 import Credentials from "./components/credentials";
 import Presentations from "./components/presentations";
-// import Portfolio from "./components/portfolio";
 import Menu from "./components/menu";
 import ThemeToggle from "./components/themetoggle";
 import dynamic from 'next/dynamic';
-
 
 const Portfolio = dynamic(() => import('./components/portfolio'), {
   loading: () => <p>Loading...</p>,
