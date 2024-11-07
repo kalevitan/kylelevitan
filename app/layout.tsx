@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Viewport } from 'next'
 import { Source_Sans_3, Roboto_Slab } from 'next/font/google';
-import 'lineicons/dist/lineicons.css';
+// import 'lineicons/dist/lineicons.css';
 import "./globals.css";
 
 const sourceSans3 = Source_Sans_3({
@@ -38,6 +38,9 @@ export default function RootLayout({
       lang="en"
       className={`${sourceSans3.variable} ${robotoSlab.variable} font-sans`}
     >
+      <head>
+        <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css" />
+      </head>
       <body>
         {children}
       </body>
