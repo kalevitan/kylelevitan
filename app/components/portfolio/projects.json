@@ -11,7 +11,7 @@
   },
   {
     "name": "Craft Brew",
-    "description": "Craft Brew was a prototype web application that allows users to search for breweries by city and state. Users can also view details about each brewery, including the brewery's name, address, phone number, and website.",
+    "description": "Craft Brew was a prototype web application that allowed users to search for breweries by city and state. Users can also view details about each brewery, including the brewery's name, address, phone number, and website.",
     "features": [
       "Design",
       "Craft CMS Development"
