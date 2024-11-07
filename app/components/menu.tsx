@@ -16,6 +16,11 @@ const Menu: React.FC = () => {
           </a>
         </li>
         <li>
+          <a href="https://www.drupal.org/u/k_a_l" rel="noreferrer" target="_blank" title="Visit my Drupal.org">
+            <i className="lni lni-drupal" aria-hidden="true"></i><div className="sr-only">drupal</div>
+          </a>
+        </li>
+        <li>
           <a href="https://github.com/kalevitan" rel="noreferrer" target="_blank" title="Visit my Github">
             <i className="lni lni-github" aria-hidden="true"></i><div className="sr-only">github</div>
           </a>
