@@ -1,12 +1,17 @@
 // components/Portfolio/Index.tsx
 'use client';
 import React from 'react';
-import Project from "./project";
+// import Project from "./project";
+import dynamic from 'next/dynamic';
 import projects from "./projects.json"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/pagination';
+
+const Project = dynamic(() => import('./project'), {
+  loading: () => <p>Loading...</p>,
+});
 
 const Portfolio: React.FC = () => {
   return (

@@ -4,7 +4,13 @@ import Credentials from "./components/credentials";
 import Presentations from "./components/presentations";
 import Portfolio from "./components/portfolio";
 import Menu from "./components/menu";
-import ThemeToggle from "./components/themetoggle";
+// import ThemeToggle from "./components/themetoggle";
+import dynamic from 'next/dynamic';
+
+
+const ThemeToggle = dynamic(() => import('./components/themetoggle'), {
+  loading: () => <p>Loading...</p>,
+});
 
 export default function Home() {
   return (
