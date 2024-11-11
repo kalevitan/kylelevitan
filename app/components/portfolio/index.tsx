@@ -49,6 +49,7 @@ const Portfolio: React.FC = () => {
                     image={project.image}
                     description={project.description}
                     features={project.features}
+                    link={project.link}
                     />
                 </div>
               </SwiperSlide>

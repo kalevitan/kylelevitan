@@ -1,13 +1,14 @@
 [
   {
     "name": "WeatherTracks",
-    "description": "WeatherTracks is a MVP that generates a list of Spotify Playlists based on a user location's weather. WeatherTracks uses the console-oriented weather forecast service, wttr.in.",
+    "description": "WeatherTracks is an MVP that curates Spotify playlists tailored to the current weather in a user's location. By integrating the OpenWeatherMap API for real-time weather data, the Spotify API for playlist generation, and The Noun Project for high-quality icons, WeatherTracks provides a personalized music experience based on local weather conditions.",
     "features": [
       "Design",
       "API Integration",
       "JavaScript/Gatsby Development"
     ],
-    "image": "/projects/weathertracks.jpg"
+    "image": "/projects/weathertracks.jpg",
+    "link": "https://weathertracks.netlify.app"
   },
   {
     "name": "Craft Brew",
@@ -19,43 +20,14 @@
     "image": "/projects/craft-brew.jpg"
   },
   {
-    "name": "Program Services",
-    "description": "Program Services is a Ruby on Rails application that provides quality continuing education courses for mental health professionals.",
-    "features": [
-      "Design",
-      "Participatory Ruby on Rails Development"
-    ],
-    "image": "/projects/program-services.jpg"
-  },
-  {
     "name": "Henco Reprographics",
-    "description": "Henco Reprographics is a WordPress website that provides information on printing and reprography services.",
+    "description": "Henco Reprographics is a WordPress website created for a local business specializing in printing and reprography services. Users can explore the range of services offered and conveniently request a customized quote by uploading their documents for print evaluation.",
     "features": [
       "Design",
       "WordPress Development"
     ],
-    "image": "/projects/hencoreprographics.jpg"
-  },
-  {
-    "name": "Climate Resilience Map",
-    "description": "Climate Resilience Map is a vanilla JavaScript-based application that provides information on climate resilience offices and territories within the United States.",
-    "features": [
-      "Design",
-      "JavaScript Development",
-      "API Integration",
-      "Drupal 7 Development"
-    ],
-    "image": "/projects/climate-resilience-map.jpg"
-  },
-  {
-    "name": "Sign The Climate Agreement",
-    "description": "Sign The Climate Agreement was a Drupal 7 website that allowed users to sign a petition to support the Paris Climate Agreement and share to a user's desired social platform.",
-    "features": [
-      "Design",
-      "API Integration",
-      "Participatory Drupal 7 development"
-    ],
-    "image": "/projects/signtheagreement.jpg"
+    "image": "/projects/hencoreprographics.jpg",
+    "link": "http://hencorepro.com/"
   },
   {
     "name": "Trinity United Methodist Church",
@@ -68,13 +40,24 @@
     "image": "/projects/trinitywavl.jpg"
   },
   {
-    "name": "Hogue Furniture Design",
-    "description": "Hogue Furniture Design was a Drupal 7 website that provided information on the company's furniture design services and products.",
+    "name": "Program Services",
+    "description": "Program Services is a Ruby on Rails application that provides quality continuing education courses for mental health professionals.",
     "features": [
-      "Design Implementation",
-      "Drupal 7 Development"
+      "Design",
+      "Participatory Ruby on Rails Development"
     ],
-    "image": "/projects/hoguesf.jpg"
+    "image": "/projects/program-services.jpg",
+    "link": "https://programservices.com/"
+  },
+  {
+    "name": "Sign The Climate Agreement",
+    "description": "Sign The Climate Agreement was a Drupal 7 website that allowed users to sign a petition to support the Paris Climate Agreement and share to a user's desired social platform.",
+    "features": [
+      "Design",
+      "API Integration",
+      "Participatory Drupal 7 development"
+    ],
+    "image": "/projects/signtheagreement.jpg"
   },
   {
     "name": "Deerwood Homeowners Association",
@@ -84,5 +67,14 @@
       "WordPress Development"
     ],
     "image": "/projects/deerwood.jpg"
+  },
+  {
+    "name": "Hogue Furniture Design",
+    "description": "Hogue Furniture Design was a Drupal 7 website that provided information on the company's furniture design services and products.",
+    "features": [
+      "Design Implementation",
+      "Drupal 7 Development"
+    ],
+    "image": "/projects/hoguesf.jpg"
   }
 ]
