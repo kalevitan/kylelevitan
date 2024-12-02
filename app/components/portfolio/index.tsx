@@ -15,15 +15,15 @@ const Project = dynamic(() => import('./project'), {
 const Portfolio: React.FC = () => {
   return (
     <>
-    <div className="layout">
-      <h2>Portfolio</h2>
-      <div className="portfolio__introduction">
-        <p className="lead">
-          {`Below are selected projects showcasing my freelance work and personal prototypes. Each project demonstrates tailored solutions and results-driven strategies, crafted to meet the unique needs of diverse clients.`}
-        </p>
-    </div>
-    </div>
-    <div className="layout !col-span-3 !px-8">
+      <div className="layout">
+        <h2>Portfolio</h2>
+        <div className="portfolio__introduction">
+          <p className="lead">
+            {`Below are selected projects showcasing my freelance work and personal prototypes. Each project highlights tailored solutions and results-oriented strategies, crafted to meet the unique needs of diverse clients and demonstrate my passion for innovation. Through these ventures, I continually strive to build impactful, user-centered applications that reflect my dedication to solving real-world problems—and sometimes just having fun.`}
+          </p>
+        </div>
+      </div>
+      <div className="layout !col-span-3 !px-8">
         <div className="portfolio__list mb-8">
           <Swiper
             pagination={{ el: ".portfolio__pagination", clickable: true, type: "bullets" }}
@@ -33,16 +33,16 @@ const Portfolio: React.FC = () => {
             breakpoints={{
               768: {
                 slidesPerView: 2,
-                spaceBetween: 30,
+                spaceBetween: 40,
               },
-              1024: {
+              1440: {
                 slidesPerView: 3,
                 spaceBetween: 40,
               },
             }}
           >
             {projects.map((project) => (
-              <SwiperSlide key={project.name} >
+              <SwiperSlide key={project.name} className="!grid !h-auto">
                 <div className="project">
                   <Project
                     name={project.name}
@@ -56,8 +56,8 @@ const Portfolio: React.FC = () => {
             ))}
           </Swiper>
         </div>
-        <div className="portfolio__pagination"></div>
-    </div>
+        <div className="portfolio__pagination py-6"></div>
+      </div>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Viewport } from 'next'
 import { Source_Sans_3, Roboto_Slab } from 'next/font/google';
+import { LazyMotion, domAnimation } from "motion/react"
 import 'lineicons/dist/lineicons.css';
 import "./globals.css";
 
@@ -39,7 +40,9 @@ export default function RootLayout({
       className={`${sourceSans3.variable} ${robotoSlab.variable} font-sans`}
     >
       <body>
-        {children}
+        <LazyMotion features={domAnimation}>
+          {children}
+        </LazyMotion>
       </body>
     </html>
   );
