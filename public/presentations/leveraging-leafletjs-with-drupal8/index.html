@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Leveraging Leaflet.js With Drupal 8 | Kyle Levitan</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!-- Nothing to see here, just some inline css -->
+		<style type="text/css">
+			.reveal a:hover { border-bottom: 6px solid; }
+			li { padding: 6px 0px !important; }
+			ul { list-style-type: none !important; }
+		</style>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>Leveraging <a href="http://leafletjs.com" title="LeafletJS Homepage" target="_blank">Leaflet.js</a> With Drupal 8</h1>
+					<h3></h3>
+					<p><small>Presentation by <a href="http://kylelevitan.com" title="Kyle Levitan Website" target="_blank">Kyle Levitan</a> | <a href="https://twitter.com/kalevitan" title="@kalevitan twitter account" target="_blank">@kalevitan</a></small></p>
+				</section>
+
+				<section>
+					<img src="images/noaa_logo_circle_72x72.svg" alt="NOAA logo" title="National Oceanic Atmospheric Administration" style="border: none; background: transparent;">
+					<h2>A little about me</h2>
+						<ul>
+							<li>Web developer for NOAA’s data collection center here in Asheville, NC, known as <a href="https://www.ncei.noaa.gov/" title="National Centers for Environmental Information" target="_blank">NCEI</a></li>
+							<li>Lead developer for <a href="https://climate.gov" title="NOAA Climate.gov" taget="_blank">Climate.gov</a> and the systems administrator for <a href="https://toolkit.climate.gov" title="U.S. Climate Resilience Toolkit" target="_blank">Toolkit.climate.gov</a></li>
+						</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Why is web mapping important?</h2>
+						<ul>
+							<li>We like to tell stories with visualizations</li>
+							<li>We like reading stories with visualizations</li>
+							<li>It's how we associate things spatially</li>
+						</ul>
+					</section>
+					<section>
+						<h2>What is <a href="https://leafletjs.com" title="LeafletJS homepage" target="_blank">Leaflet.js?</a></h2>
+						<ul>
+							<li>Open source JavaScript library</li>
+							<li>Comparable to Google Maps API or Bing maps API, but it’s free!<ul>
+							<li><em>No API keys needed</em></li></ul></li>
+							<li>Light-weight:<ul>
+							<li><strong>Weighs just about 33 KB</strong></li></ul></li>
+							<li>Framework’s infrastructure is comprised of modern web programming, such as current features of JavaScript, HTML5, and CSS3</li>
+							<li>Optimized for mobile devices</li>
+							<li>Designed for retina or 4k displays</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Integrating with Drupal</h2>
+							<ol>
+								<li>Need a custom theme</li>
+								<li><a href="http://leafletjs.com/download.html" title="LeafletJS Download Page" target="_blank">Leaflet library</a></li>
+								<li>Install GeoPHP dependency via Composer *</li>
+									<pre><code class="hljs" data-trim contenteditable>
+$ composer config repositories.drupal composer https://packages.drupal.org/8
+$ composer require "phayes/geophp"
+									</code></pre>
+								<small><a href="https://www.drupal.org/node/2718229" title="Using Composer to manage Drupal site dependencies" target="_blank">*More info about Composer</a></small>
+							</ol>
+					</section>
+					<section>
+						<h2>Integrating with Drupal <i>(cont.)</i></h2>
+							<ol>
+								<li>Contrib modules:<ul>
+								<li><a href="https://www.drupal.org/project/leaflet" title="Drupal.org leaflet module" target="_blank">Leaflet</a></li>
+								<li><a href="https://www.drupal.org/project/geofield" title="Drupal.org geofield module" target="_blank">GeoField</a></li>
+								<li><a href="https://www.drupal.org/project/views_geojson" title="Drupal.org views_geojson module" target="_blank">Views_geojson</a></li></ul></li>
+								<li>Core modules:<ul>
+								<li>Views</li>
+								<li>REST</li>
+								<li>Serialize</li></ul></li>
+							</ol>
+					</section>
+					<section>
+						<h2>Attach Leaflet to your Theme</h2>
+							<ul>
+								<li>Reference the library in your theme’s libraries.yml file.</li>
+									<pre><code class="hljs" data-trim contenteditable>
+global:
+  version: VERSION
+  css:
+    base:
+      libraries/leaflet/leaflet.css: {}
+      css/THEME_NAME.css: {}
+  js:
+    libraries/leaflet/leaflet.js: {}
+    js/THEME_NAME.js: {}
+  dependencies:
+    - core/jquery
+									</code></pre>
+								<li>Include it in your theme’s info.yml file.</li>
+									<pre><code class="hljs" data-trim contenteditable>
+libraries:
+ - leaflet_dcavl/global
+								</code></pre>
+							</ul>
+					</section>
+					<section>
+						<h2>Setting up Drupal components</h2>
+							<ul>
+								<li>Create a content type with GeoField field.</li>
+								<img src="images/add-field.png" alt="Drupal content field" title="Drupal content field" width="600px">
+							</ul>
+					</section>
+					<section>
+						<h2>Setting up Drupal components</h2>
+							<ul>
+								<li>Create a View to act as your data end point.</li>
+								<img src="images/rest.png" alt="Drupal view end point" title="Drupal view end point" width="600px">
+							</ul>
+					</section>
+					<section>
+						<h2>Setting up Drupal components</h2>
+							<ul>
+								<li>Set your REST export fields.</li>
+								<img src="images/rest-export.png" alt="Drupal end point settings" title="Drupal end point settings" width="600px">
+							</ul>
+					</section>
+					<section>
+						<h2>Configuring your View</h2>
+							<ul>
+								<li>Change the format to GeoJSON and add additional fields.</li>
+								<img src="images/view.png" alt="Drupal view display" title="Drupal view display">
+							</ul>
+					</section>
+					<section>
+						<h2>Defining your map element</h2>
+							<ul>
+								<li>Add the map container to a template file.</li>
+									<pre><code class="hljs" data-trim contenteditable>
+{{ page.content }}
+<div id="map" class="us-cities"></div>
+									</code></pre>
+								<li>Define a map container height.</li>
+								<pre><code class="hljs" data-trim contenteditable>
+#map {
+  height: 500px;
+}
+								</code></pre>
+							</ul>
+					</section>
+					<section>
+						<h2>Initializing your map</h2>
+							<ul>
+								<li>Define your map settings within your custom JS file.</li>
+							</ul>
+							<pre><code class="hljs" data-trim contenteditable>
+/**
+ * Declare a layer variable for your basemap.
+ */
+var baselayer = L.tileLayer ('https://MAP_TILE_URL/{z}/{x}/{y}', {
+  attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a>',
+  maxZoom: 12,
+});
+
+/**
+ * Declare your map variable.
+ */
+var map = L.map('map', {
+  scrollWheelZoom: false,
+  center: [35.5951, -82.5515],
+});
+
+/**
+ * Bind the baselayer to your map.
+ */
+map.addLayer(baselayer);
+							</code></pre>
+							<small><a href="http://leaflet-extras.github.io/leaflet-providers/preview/" title="An extension to Leaflet that contains configurations for various free tile providers." target="_blank">Leaflet Provider Demo</a></small>
+					</section>
+					<section>
+						<h2>Fetching your map data</h2>
+							<ul>
+								<li>Use the $.getJSON jQuery method to load our geoJSON view.</li>
+							</ul>
+							<pre><code class="hljs" data-trim contenteditable>
+/**
+ * Fetch geoJSON data, then fit contents within viewing area before adding to the map.
+ */
+$.getJSON('/us-cities').then(function(data) {
+  var events = L.geoJson(data);
+  map.fitBounds(events.getBounds(), {
+    padding: [50, 50]
+  });
+  map.addLayer(events);
+});
+							</code></pre>
+					</section>
+					<section>
+						<h2>Altering your map data <i>(partial)</i></h2>
+							<p>Leaflet allows you to pass a variety of callbacks as <br>options to the L.geoJson layer.</p>
+							<pre><code class="hljs" data-trim contenteditable>
+/*...*/
+filter: function(feature, layer) {
+  return feature.properties.type === 'city';
+},
+pointToLayer: function(feature, latlng) {
+  return L.marker(latlng, {icon: [PRE_DEF_VARIABLE]});
+},
+onEachFeature: function(feature, layer) {
+  layer.bindPopup('<h5>'+feature.properties.name+'</h5>');
+},
+/*...*/
+							</code></pre>
+					</section>
+					<section>
+						<h2>Altering your map data <i>(full)</i></h2>
+							<p>Leaflet allows you to pass a variety of callbacks as <br>options to the L.geoJson layer.</p>
+							<pre><code class="hljs" data-trim contenteditable>
+$.getJSON('/us-cities').then(function(data) {
+ var events = L.geoJson(data, {
+   // Filter feature data.
+   filter: function(feature, layer) {
+     return feature.properties.type === 'city';
+   },
+   // Define layer settings.
+   pointToLayer: function(feature, latlng) {
+     return L.marker(latlng, {icon: [PRE_DEF_VARIABLE]});
+   },
+   // Bind popup properties.
+   onEachFeature: function(feature, layer) {
+     layer.bindPopup('<h5>'+feature.properties.name+'</h5>');
+   },
+ });
+ // Fit points to viewing area.
+ map.fitBounds(events.getBounds(), {
+   padding: [50, 50]
+ });
+ // Add the events array to the map.
+ map.addLayer(events);
+});
+							</code></pre>
+					</section>
+					<section>
+						<h2>The Whole Enchilada</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+/**
+ * Declare a layer variable for your basemap.
+ */
+var baselayer = L.tileLayer ('https://MAP_TILE_URL/{z}/{x}/{y}', {
+  attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a>',
+  maxZoom: 12,
+});
+
+/**
+ * Declare your map variable.
+ */
+var map = L.map('map', {
+  scrollWheelZoom: false,
+  center: [35.5951, -82.5515],
+});
+
+/**
+ * Bind the baselayer to your map.
+ */
+map.addLayer(baselayer);
+
+$.getJSON('/us-cities').then(function(data) {
+ var events = L.geoJson(data, {
+   // Filter feature data.
+   filter: function(feature, layer) {
+     return feature.properties.type === 'city';
+   },
+   // Define layer settings.
+   pointToLayer: function(feature, latlng) {
+     return L.marker(latlng, {icon: [PRE_DEF_VARIABLE]});
+   },
+   // Bind popup properties.
+   onEachFeature: function(feature, layer) {
+     layer.bindPopup('<h5>'+feature.properties.name+'</h5>');
+   },
+ });
+ // Fit points to viewing area.
+ map.fitBounds(events.getBounds(), {
+   padding: [50, 50]
+ });
+ // Add the events array to the map.
+ map.addLayer(events);
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2>Thank you</h2>
+						<p>questions?</p>
+						<p><small><a href="http://kylelevitan.com" title="Kyle Levitan Website" target="_blank">kylelevitan.com</a> | <a href="https://twitter.com/kalevitan" title="@kalevitan twitter account" target="_blank">@kalevitan</a></small></p>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

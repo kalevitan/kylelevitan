@@ -2,7 +2,7 @@
 import React from "react";
 
 const Header: React.FC = () => {
-  return(
+  return (
     <div className="layout">
       <h1>
         <span className="header__name">Kyle Levitan</span><br/>
