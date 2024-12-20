@@ -14,7 +14,7 @@ interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({ name, image, description, features, link, source }) => {
   return (
-    <div className="portfolio__slide relative !p-12 rounded-2xl grid auto-flow-col gap-12 md:grid-cols-[1fr,40%] xlg:grid-cols-[1fr,35%] items-center">
+    <div className="portfolio__slide relative p-8 sm:p-12 rounded-2xl grid auto-flow-col gap-0 sm:gap-12 md:grid-cols-[1fr,40%] xlg:grid-cols-[1fr,35%] items-center">
       <div className="portfolio__image relative border-gray-400 border-opacity-25 rounded-2xl shadow-md object-contain max-h-[485px] overflow-hidden md:order-1">
         <Image
           src={image}
