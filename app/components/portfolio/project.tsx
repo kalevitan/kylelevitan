@@ -26,7 +26,7 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, features, l
       </div>
       <div className="portfolio__details--wrapper flex flex-col">
 
-        <div className="portfolio__header flex items-center justify-between">
+        <div className="portfolio__header flex items-center gap-4">
           <h3>{name}</h3>
           {(link || source) && (
             <div className="portfolio__cta flex gap-4 mt-4">

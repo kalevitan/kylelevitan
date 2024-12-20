@@ -9,7 +9,7 @@ const Menu: React.FC = () => {
   const email = obfuscateEmail('kylelevitan', 'gmail.com');
 
   return (
-    <div className="menu pt-4">
+    <div className="menu">
       <ul className="grid grid-cols-4 gap-3 max-w-64">
         <li>
           <a href={`mailto:${email}`} rel="noreferrer" title="Send me an email" target="_blank">

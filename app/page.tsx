@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <header className="grid grid-cols-core">
-        <div className="layout flex justify-between">
+        <div className="layout flex justify-between mt-4">
           <Menu/>
           <ThemeToggle/>
         </div>
