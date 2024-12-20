@@ -1,7 +1,6 @@
 import Header from "./components/header";
 import Section from "./components/section"
 import Credentials from "./components/credentials";
-import Presentations from "./components/presentations";
 import Menu from "./components/menu";
 import ThemeToggle from "./components/themetoggle";
 import dynamic from 'next/dynamic';
@@ -31,10 +30,6 @@ export default function Home() {
 
         <Section title="credentials">
           <Credentials/>
-        </Section>
-
-        <Section title="presentations">
-          <Presentations/>
         </Section>
       </main>
 
