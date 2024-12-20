@@ -3,24 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --brand: #BF3B46;
+  --brand: #bf3b46;
   --gray: #555555;
   --background: #ffffff;
   --background-gray: #f7f7f7;
+  --background-shade: hsl(178.59deg 34.98% 47.65% / 8%);
   --foreground: #171717;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --background-gray: #1c1b1b;
-    --foreground: #ededed;
-  }
-} */
 
 .dark {
   --background: #0a0a0a;
   --background-gray: #1c1b1b;
+  --background-shade: hsl(358.59deg 34.98% 57.65% / 8%);
   --foreground: #ededed;
 }
 
@@ -30,23 +24,26 @@ body {
   font-family: var(--font-source-sans-3);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-roboto-slab);
   text-transform: capitalize;
   color: var(--brand);
-	font-weight: 700;
-	line-height: 1.4;
-	margin-bottom: 1em;
-	margin-top: 1.5em;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0.67em 0;
-  letter-spacing: .0365rem;
+  letter-spacing: 0.0365rem;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     font-size: 3.5rem;
   }
 
@@ -54,8 +51,8 @@ h1 {
     font-size: 1.7rem;
     font-weight: 400;
     margin: 0.67em 0;
-    letter-spacing: .0325rem;
-      font-family: var(--font-source-sans-3);
+    letter-spacing: 0.0325rem;
+    font-family: var(--font-source-sans-3);
     margin-top: 0.5rem;
   }
 }
@@ -63,16 +60,16 @@ h1 {
 h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  letter-spacing: .0325rem;
+  letter-spacing: 0.0325rem;
 }
 
 h3 {
-	font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
 h4 {
-	font-size: 1rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -82,7 +79,7 @@ a:focus {
   border: none;
   display: inline-block;
   text-decoration: underline;
-  transition: all .15s ease-in;
+  transition: all 0.15s ease-in;
   &:hover {
     filter: brightness(120%);
   }
@@ -111,18 +108,11 @@ footer {
   padding-right: 1rem;
 }
 
-.credentials__specs,
-.portfolio__details {
-  li {
-    position: relative;
-  }
-}
-
 .section--panel {
   .lead {
     font-size: 1.25rem;
     line-height: 2;
-    letter-spacing: .0365rem;
+    letter-spacing: 0.0365rem;
     padding: 0 0 50px 0px;
   }
 }
@@ -131,77 +121,42 @@ footer {
   background-color: var(--background-gray);
 }
 
-.project {
-  .portfolio__image {
-    position: relative;
-    overflow: hidden;
-    padding-top: calc(183 / 337 * 100%);
-    width: 100%;
-  }
-
-  .aspect-ratio-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
-
-  &:hover {
-    cursor: move;
-  }
-}
-
-.portfolio__pagination {
-  z-index: 15;
+.portfolio__list {
+  align-items: center;
   display: flex;
-  justify-content: center;
-  padding-left: 0;
-  list-style: none;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: min-content;
+  justify-content: flex-start;
+  position: relative;
+}
 
-  .swiper-pagination-bullet {
-    border-radius: 0;
-    display: list-item;
-    position: relative;
-    flex: 0 1 auto;
-    width: 30px;
-    height: 3px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    background-color: var(--gray);
-    cursor: pointer;
+.portfolio__slide {
+  flex: 0 0 auto;
+  height: auto;
+  position: relative;
+  min-height: 650px;
+  border-top: 1px solid #d2cfcf57;
+  background: var(--background-gray)
+    linear-gradient(
+      135deg,
+      hsl(178.59deg 34.98% 47.65% / 8%) 0%,
+      hsl(358.59deg 34.98% 57.65% / 8%) 100%
+    );
+  background-blend-mode: normal;
+}
 
-    &:before {
-      position: absolute;
-      top: -10px;
-      left: 0;
-      display: inline-block;
-      width: 100%;
-      height: 10px;
-      content: "";
-    }
-
-    &:after {
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      display: inline-block;
-      width: 100%;
-      height: 10px;
-      content: "";
-    }
-
-    &.swiper-pagination-bullet-active {
-      background-color: var(--brand);
-    }
+@media (min-width: 768px) {
+  .portfolio__slide {
+    top: 130px;
+    position: sticky;
   }
 }
 
-.presentations__links {
+.credentials__specs,
+.portfolio__details {
   li {
-    margin-bottom: 10px;
+    position: relative;
   }
 }

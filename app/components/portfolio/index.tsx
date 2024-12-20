@@ -3,8 +3,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import projects from "./projects.json"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -23,40 +21,21 @@ const Portfolio: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="layout !col-span-3 !px-8">
-        <div className="portfolio__list mb-8">
-          <Swiper
-            pagination={{ el: ".portfolio__pagination", clickable: true, type: "bullets" }}
-            modules={[Pagination]}
-            spaceBetween={35}
-            slidesPerView={1}
-            breakpoints={{
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 40,
-              },
-              1440: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-              },
-            }}
-          >
-            {projects.map((project) => (
-              <SwiperSlide key={project.name} className="!grid !h-auto">
-                <div className="project">
-                  <Project
-                    name={project.name}
-                    image={project.image}
-                    description={project.description}
-                    features={project.features}
-                    link={project.link}
-                    />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+      <div className="layout 2xl:!col-span-3 2xl:mx-60 mx-0">
+        <div className="portfolio__list grid gap-12 mb-8">
+          {projects?.map((project, index) => (
+            <div className="project sm:contents" key={index}>
+              <Project
+                name={project.name}
+                image={project.image}
+                description={project.description}
+                features={project.features}
+                link={project.link}
+                source={project.source}
+                />
+            </div>
+          ))}
         </div>
-        <div className="portfolio__pagination py-6"></div>
       </div>
     </>
   );

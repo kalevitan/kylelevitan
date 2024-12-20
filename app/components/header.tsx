@@ -11,6 +11,7 @@ export const Header: React.FC = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: .5, ease: "easeOut" }}
+      style={{ willChange: "transform, opacity" }}
     >
       <h1>
         <span className="header__name">Kyle Levitan</span><br/>
