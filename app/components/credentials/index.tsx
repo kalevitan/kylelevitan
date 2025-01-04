@@ -28,7 +28,7 @@ const Credentials: React.FC = () => {
             <h3>{credential.category}</h3>
             <ul>
               {credential.skills?.map((skill, index) => (
-                <li className="flex items-center" key={index}><i className="lni lni-check-square-2"></i>{skill}</li>
+                <li className="flex items-center mb-1" key={index}><i className="lni lni-check-square-2 pr-1"></i>{skill}</li>
               ))}
             </ul>
           </div>
