@@ -13,14 +13,14 @@ export default function Home() {
   return (
     <>
       <header className="grid grid-cols-core">
-        <div className="layout flex justify-between mt-4">
+        <div className="layout flex justify-between my-4">
           <Menu/>
           <ThemeToggle/>
         </div>
       </header>
 
       <main>
-        <Section title="header">
+        <Section title="header" classes="animated-gradient">
           <Header/>
         </Section>
 
@@ -34,7 +34,8 @@ export default function Home() {
       </main>
 
       <footer className="grid grid-cols-core py-4">
-        <div className="layout flex justify-end">
+        <div className="layout flex items-center justify-between">
+          <div className="text-md font-serif text-[var(--brand)]">© {new Date().getFullYear()}, Kyle Levitan</div>
           <Menu/>
         </div>
       </footer>

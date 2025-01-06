@@ -8,7 +8,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      sans: ['var(--font-source-sans-3)', 'var(--font-roboto-slab)', 'sans-serif'],
+      sans: ['var(--font-source-sans-3)', 'sans-serif'],
+      serif: ['var(--font-roboto-slab)', 'serif'],
     },
     extend: {
       gridTemplateColumns: {

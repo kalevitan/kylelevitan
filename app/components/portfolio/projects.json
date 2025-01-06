@@ -1,70 +1,97 @@
 [
   {
     "name": "BikeLock Finder",
+    "type": "Web Application",
     "description": "BikeLock Finder is an MVP designed to help users locate or contribute safe and nearby bike lock stations. By integrating mapping tools and real-time location data, it provides a user-friendly interface for finding or adding secure bike storage options. This application aims to enhance convenience and promote safe biking practices, delivering a practical solution for urban cyclists.",
     "features": [
       "Next.js",
       "Google Cloud Platform",
       "Google Maps",
       "Google Places",
-      "Firebase"
+      "Firebase",
+      "Tailwind CSS"
     ],
     "image": "/projects/bikelock-finder.jpg",
     "link": "https://bike-lock-finder.vercel.app",
-    "source": "https://github.com/kalevitan/bike-lock-finder"
+    "source": "https://github.com/kalevitan/bike-lock-finder",
+    "purpose": "MVP",
+    "year": "2024"
   },
   {
     "name": "WeatherTracks",
+    "type": "Web Application",
     "description": "WeatherTracks is an MVP that curates Spotify playlists tailored to the current weather in a user's location. By integrating the OpenWeatherMap API for real-time weather data, the Spotify API for playlist generation, and The Noun Project for high-quality icons, WeatherTracks provides a personalized music experience based on local weather conditions.",
     "features": [
       "Gatsby.js",
-      "Spotify",
-      "OpenWeatherMap",
-      "Noun Project"
+      "Spotify API",
+      "OpenWeatherMap API",
+      "Noun Project API",
+      "Tailwind CSS"
     ],
     "image": "/projects/weathertracks.jpg",
     "link": "https://weathertracks.netlify.app",
-    "source": "https://github.com/kalevitan/weathertracks"
+    "source": "https://github.com/kalevitan/weathertracks",
+    "purpose": "MVP",
+    "year": "2021"
   },
   {
     "name": "Henco Reprographics",
+    "type": "Website",
     "description": "Henco Reprographics is a WordPress website created for a local business specializing in printing and reprography services. Users can explore the range of services offered and conveniently request a customized quote by uploading their documents for print evaluation.",
     "features": [
       "WordPress",
-      "Design",
-      "JavaScript"
-    ],
-    "image": "/projects/hencoreprographics.jpg",
-    "link": "http://hencorepro.com/"
-  },
-  {
-    "name": "Trinity United Methodist Church",
-    "description": "Trinity United Methodist Church's Drupal 7 website served as a hub for information about the church's services and events. I collaborated with the church to design and develop a complete branding package, including a logo, stationery, photography, and a website that aligned with their values and mission.",
-    "features": [
-      "Drupal",
+      "JavaScript",
+      "CSS",
       "Design",
       "Branding"
     ],
-    "image": "/projects/trinitywavl.jpg"
+    "image": "/projects/hencoreprographics.jpg",
+    "link": "http://hencorepro.com/",
+    "purpose": "Freelance",
+    "year": "2017"
+  },
+  {
+    "name": "Trinity United Methodist Church",
+    "type": "Website",
+    "description": "Trinity United Methodist Church's Drupal 7 website served as a hub for information about the church's services and events. I collaborated with the church to design and develop a complete branding package, including a logo, stationery, photography, and a website that aligned with their values and mission.",
+    "features": [
+      "Drupal",
+      "JavaScript",
+      "CSS",
+      "Design",
+      "Branding"
+    ],
+    "image": "/projects/trinitywavl.jpg",
+    "purpose": "Freelance",
+    "year": "2018"
   },
   {
     "name": "Program Services",
+    "type": "Website",
     "description": "Program Services is a Ruby on Rails application offering quality continuing education courses for mental health professionals. I contributed to the development of the website’s frontend, focusing on enhancing the user experience and ensuring an intuitive interface.",
     "features": [
       "Ruby on Rails",
+      "JavaScript",
+      "CSS",
       "Design"
     ],
     "image": "/projects/program-services.jpg",
-    "link": "https://programservices.com/"
+    "purpose": "Freelance",
+    "year": "2018"
   },
   {
     "name": "Sign The Climate Agreement",
+    "type": "Web Application",
     "description": "Sign The Climate Agreement was a Drupal 7 website that allowed users to sign a petition to support the Paris Climate Agreement and share to a user's desired social platform.",
     "features": [
       "Drupal",
-      "Design",
-      "Social APIs"
+      "JavaScript",
+      "CSS",
+      "Social APIs",
+      "Design"
     ],
-    "image": "/projects/signtheagreement.jpg"
+    "image": "/projects/signtheagreement.jpg",
+    "purpose": "Freelance",
+    "year": "2016"
   }
 ]
