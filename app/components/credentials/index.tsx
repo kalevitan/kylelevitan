@@ -2,7 +2,7 @@
 'use client';
 import React from "react";
 import credentialsData from "./credentials.json";
-import { LucideProps, icons as LucideIcons } from 'lucide-react';
+import { LucideProps, Layout, Server, Code2, Workflow } from "lucide-react";
 import Accordion from "./accordion";
 
 interface Skill {
@@ -34,9 +34,15 @@ const Credentials: React.FC = () => {
   //   console.log(expandedCategory);
   // }
 
-  const DynamicIcon = ({ iconName, ...props }: IconProps) => {
-    const LucideIcon = LucideIcons[iconName as keyof typeof LucideIcons];
-    if (!LucideIcon || typeof LucideIcon !== "function") return null;
+  const iconMapping = {
+    Layout,
+    Server,
+    Code2,
+    Workflow,
+  };
+
+  const DynamicIcon: React.FC<IconProps> = ({ iconName, ...props }) => {
+    const LucideIcon = iconMapping[iconName as keyof typeof iconMapping];
     return <LucideIcon {...props} />;
   };
 
