@@ -1,8 +1,8 @@
 // components/Index.tsx
 'use client';
-import React, { useState } from "react";
+import React from "react";
 import credentialsData from "./credentials.json";
-import * as LucideIcons from 'lucide-react';
+import { LucideProps, icons as LucideIcons } from 'lucide-react';
 import Accordion from "./accordion";
 
 interface Skill {
@@ -21,6 +21,10 @@ interface CredentialsData {
   credentials: Credential[];
 }
 
+interface IconProps extends LucideProps {
+  iconName: string;
+}
+
 const Credentials: React.FC = () => {
   const credentials: CredentialsData = credentialsData;
   // const [expandedCategory, setExpandedCategory] = useState('');
@@ -30,10 +34,10 @@ const Credentials: React.FC = () => {
   //   console.log(expandedCategory);
   // }
 
-  const DynamicIcon = ({ iconName, ...props }) => {
-    const Icon = LucideIcons[iconName];
-    if (!Icon) return null;
-    return <Icon {...props} />;
+  const DynamicIcon = ({ iconName, ...props }: IconProps) => {
+    const LucideIcon = LucideIcons[iconName as keyof typeof LucideIcons];
+    if (!LucideIcon || typeof LucideIcon !== "function") return null;
+    return <LucideIcon {...props} />;
   };
 
   return (
@@ -42,7 +46,8 @@ const Credentials: React.FC = () => {
         <h2>Technical Skills</h2>
         <div className="credentials__introduction">
           <p className="lead">
-            This is a curated list of languages, technologies, and frameworks that I’ve worked with across various projects. While my experience with each varies, what excites me most is exploring and adapting to new tools and approaches. Ultimately, it’s all about choosing the right solution for the project.          </p>
+            This is a curated list of languages, technologies, and frameworks that I&apos;ve worked with across various projects. While my experience with each varies, what excites me most is exploring and adapting to new tools and approaches. Ultimately, it’&apos;s all about choosing the right solution for the project.
+          </p>
         </div>
       </div>
       <div className="layout xl:!col-span-3 xl:mx-40 2xl:mx-60 mx-0 !px-0">
@@ -51,7 +56,7 @@ const Credentials: React.FC = () => {
             <div className={`credentials__list flex flex-col p-12 border-spacing-2 rounded items-start gap-6 ${credential.grid == 'large' ? 'col-span-full sm:col-span-7 gradient-left' : 'col-span-full sm:col-span-5 gradient-right'}`} key={credential.category}>
               <h3 className="m-0 flex gap-2 items-center">
                 <div className="p-3 rounded-lg bg-[var(--background-gray)] bg-opacity-10">
-                  <DynamicIcon className="w-5 h-5 text-[var(--brand)]" iconName={credential.icon} size={25} />
+                  <DynamicIcon className={"w-5 h-5 text-[var(--brand)]"} iconName={credential.icon} size={25} />
                 </div>
                 {credential.category}
               </h3>
