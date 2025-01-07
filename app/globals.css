@@ -20,6 +20,10 @@
   --foreground: #ededed;
 }
 
+html {
+  background: var(--background-gray);
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -90,10 +94,6 @@ a:focus {
 i.lni {
   color: var(--brand);
   font-size: 1.2rem;
-}
-
-.credentials__content i.lni {
-  color: inherit;
 }
 
 header,
