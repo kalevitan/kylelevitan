@@ -15,9 +15,19 @@ interface ProjectProps {
   year?: string;
 }
 
-const Project: React.FC<ProjectProps> = ({ name, type, image, description, features, link, source, purpose, year }) => {
+const Project: React.FC<ProjectProps> = ({
+  name,
+  type,
+  image,
+  description,
+  features,
+  link,
+  source,
+  purpose,
+  year
+}) => {
   return (
-    <div className="portfolio__slide relative p-8 sm:p-12 rounded grid auto-flow-col gap-0 sm:gap-14 md:grid-cols-[1fr,45%] xlg:grid-cols-[1fr,35%] items-center">
+    <div className="portfolio__slide relative p-8 sm:p-12 rounded grid auto-flow-col gap-0 sm:gap-14 md:grid-cols-[1fr,45%] xlg:grid-cols-[1fr,35%] items-center max-w-[1472px]">
       <div className="portfolio__details--wrapper flex flex-col">
         <div className="portfolio__header flex flex-col">
           <span className="text-[var(--gray)] text-sm">{type}</span>

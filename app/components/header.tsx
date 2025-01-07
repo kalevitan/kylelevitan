@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
   return (
     <motion.div
       className="layout"
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 75 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: .5, ease: "easeOut" }}
       style={{ willChange: "transform, opacity" }}
