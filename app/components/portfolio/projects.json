@@ -5,16 +5,37 @@
     "description": "BikeLock Finder is an MVP designed to help users locate or contribute safe and nearby bike lock stations. By integrating mapping tools and real-time location data, it provides a user-friendly interface for finding or adding secure bike storage options. This application aims to enhance convenience and promote safe biking practices, delivering a practical solution for urban cyclists.",
     "features": [
       "Next.js",
+      "TypeScript",
+      "CSS",
+      "Tailwind CSS",
       "Google Cloud Platform",
       "Google Maps",
       "Google Places",
-      "Firebase",
-      "Tailwind CSS"
+      "Firebase"
     ],
     "image": "/projects/bikelock-finder.jpg",
     "link": "https://bike-lock-finder.vercel.app",
     "source": "https://github.com/kalevitan/bike-lock-finder",
     "purpose": "MVP",
+    "year": "2024"
+  },
+    {
+    "name": "My Portfolio",
+    "type": "Website",
+    "description": "My portfolio site has been a dynamic project, evolving through multiple iterations as I refine its design and functionality. Beyond showcasing my work, it has served as a testing ground for exploring new tools, frameworks, and techniques. From experimenting with modern JavaScript libraries to implementing responsive design and performance optimizations, this site reflects my continuous learning and passion for creating intuitive, polished web experiences.",
+    "features": [
+      "Next.js",
+      "TypeScript",
+      "CSS",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Cloudflare Pages",
+      "Design"
+    ],
+    "image": "/projects/levitan-portfolio.jpg",
+    "link": "",
+    "source": "",
+    "purpose": "Personal",
     "year": "2024"
   },
   {
@@ -26,7 +47,9 @@
       "Spotify API",
       "OpenWeatherMap API",
       "Noun Project API",
-      "Tailwind CSS"
+      "CSS",
+      "Tailwind CSS",
+      "Design"
     ],
     "image": "/projects/weathertracks.jpg",
     "link": "https://weathertracks.netlify.app",
@@ -68,7 +91,7 @@
   {
     "name": "Program Services",
     "type": "Website",
-    "description": "Program Services is a Ruby on Rails application offering quality continuing education courses for mental health professionals. I contributed to the development of the website’s frontend, focusing on enhancing the user experience and ensuring an intuitive interface.",
+    "description": "Program Services was a Ruby on Rails application offering quality continuing education courses for mental health professionals. I contributed to the development of the website’s frontend, focusing on enhancing the user experience and ensuring an intuitive interface.",
     "features": [
       "Ruby on Rails",
       "JavaScript",
