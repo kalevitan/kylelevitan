@@ -52,7 +52,7 @@ const Credentials: React.FC = () => {
         <h2>Technical Skills</h2>
         <div className="credentials__introduction">
           <p className="lead">
-            This is a curated list of languages, technologies, and frameworks that I&apos;ve worked with across various projects. While my experience with each varies, what excites me most is exploring and adapting to new tools and approaches. Ultimately, it’&apos;s all about choosing the right solution for the project.
+            This is a curated list of languages, technologies, and frameworks that I&apos;ve worked with across various projects. While my experience with each varies, what excites me most is exploring and adapting to new tools and approaches. Ultimately, it&apos;s all about choosing the right solution for the project.
           </p>
         </div>
       </div>
