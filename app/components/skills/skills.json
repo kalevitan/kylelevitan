@@ -34,7 +34,7 @@
         },
         {
           "type": "APIs & Databases",
-          "list": ["MySQL", "REST", "GraphQL"]
+          "list": ["MySQL", "Firestore", "REST", "GraphQL"]
         },
         {
           "type": "Mapping & Visualization APIs",
@@ -67,8 +67,8 @@
           "list": ["Docker Compose", "Lando", "Docksal", "DDEV"]
         },
         {
-          "type": "Version Control",
-          "list": ["Git", "CI/CD tools (Bitbucket, GitHub, GitLab, CircleCI)"]
+          "type": "Version Control & DevOps",
+          "list": ["Git", "Bitbucket Pipelines", "GitHub Actions", "CircleCI"]
         }
       ]
     }

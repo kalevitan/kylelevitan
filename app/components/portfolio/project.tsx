@@ -44,7 +44,7 @@ const Project: React.FC<ProjectProps> = ({
         </div>
       </div>
       <div className="portfolio__image-wrapper pt-8 sm:pt-0">
-        <div className="portfolio__image relative border-gray-400 rounded border-opacity-25 shadow-md object-contain max-h-[268px] overflow-hidden">
+        <div className="portfolio__image relative border-gray-400 rounded border-opacity-25 shadow-md object-contain max-h-[335px] overflow-hidden">
           <Image
             src={image}
             alt={name}
