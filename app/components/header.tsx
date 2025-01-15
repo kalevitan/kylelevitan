@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 export const Header: React.FC = () => {
   return (
     <motion.div
-      className="layout md:min-h-[70dvh]"
+      className="layout md:min-h-[70dvh] place-content-center"
       initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: .5, ease: "easeOut" }}
