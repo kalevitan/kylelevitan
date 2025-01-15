@@ -1,6 +1,7 @@
 // components/ThemeToggle.tsx
 "use client"
 import React, { useEffect, useState } from 'react';
+import { Sun, Moon } from 'lucide-react';
 
 const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -29,12 +30,12 @@ const ThemeToggle = () => {
     <button className="theme-toggle" onClick={toggleTheme}>
       {isDarkMode ? (
         <>
-          <i className="lni lni-sun-1"></i>
+          <Moon color={"var(--brand)"}/>
           <span className="sr-only">Toggle lightmode</span>
         </>
       ) : (
         <>
-          <i className="lni lni-moon-half-right-5"></i>
+          <Sun color={"var(--brand)"}/>
           <span className="sr-only">Toggle darkmode</span>
         </>
       )}

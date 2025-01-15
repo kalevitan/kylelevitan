@@ -53,7 +53,7 @@ const Project: React.FC<ProjectProps> = ({
             priority
           />
         </div>
-        <ul className="portfolio__details flex flex-wrap gap-2 my-4">
+        <ul className="portfolio__details flex flex-wrap gap-2 my-5">
           {features?.map((feature, index) => (
             <li className="flex items-center px-4 py-2 rounded-2xl bg-[var(--background-gray)]" key={index}>
               {feature}

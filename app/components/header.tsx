@@ -7,8 +7,8 @@ import { motion } from "motion/react";
 export const Header: React.FC = () => {
   return (
     <motion.div
-      className="layout"
-      initial={{ opacity: 0, y: 75 }}
+      className="layout min-h-[66vh]"
+      initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: .5, ease: "easeOut" }}
       style={{ willChange: "transform, opacity" }}
@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
       </h1>
       <div className="header__introduction">
         <p className="lead">
-          I&apos;m a software engineer with experience building frontend and backend solutions for a variety of platforms, including content management systems like Drupal and WordPress. I specialize in JavaScript frameworks such as React and Next.js, with additional experience in Vue. My work also includes API development using REST and GraphQL, as well as building and maintaining full-stack applications with technologies like Ruby on Rails. With a strong background in system administration, design, and cloud platforms, I deliver end-to-end solutions tailored to client needs.
+          I&apos;m a software engineer with expertise in crafting frontend and backend solutions for diverse platforms, including Drupal and WordPress. I specialize in modern JavaScript frameworks like React, Next.js, and Vue, and have experience developing APIs with REST and GraphQL. Additionally, I build full-stack applications using Ruby on Rails and leverage my background in system administration and cloud platforms to deliver complete, client-focused solutions.
         </p>
       </div>
     </motion.div>
