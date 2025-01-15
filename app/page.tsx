@@ -1,6 +1,7 @@
 import Header from "./components/header";
 import Section from "./components/section"
-import Credentials from "./components/credentials";
+import Skills from "./components/skills";
+import Certifications from "./components/certifications";
 import Menu from "./components/menu";
 import ThemeToggle from "./components/themetoggle";
 import dynamic from 'next/dynamic';
@@ -24,16 +25,20 @@ export default function Home() {
           <Header/>
         </Section>
 
-        <Section title="portfolio">
+        <Section title="portfolio" classes="bg-[var(--background-gray)]">
           <Portfolio/>
         </Section>
 
-        <Section title="credentials">
-          <Credentials/>
+        <Section title="skills">
+          <Skills/>
+        </Section>
+
+        <Section title="certifications" classes="bg-[var(--background-gray)]">
+          <Certifications/>
         </Section>
       </main>
 
-      <footer className="grid grid-cols-core py-4">
+      <footer className="grid grid-cols-core py-6">
         <div className="layout flex items-center justify-between">
           <div className="text-md font-serif text-[var(--brand)]">© {new Date().getFullYear()}, Kyle Levitan</div>
           <Menu/>

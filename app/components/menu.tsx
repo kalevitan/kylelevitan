@@ -10,7 +10,7 @@ const Menu: React.FC = () => {
 
   return (
     <div className="menu">
-      <ul className="grid grid-cols-4 gap-3 max-w-64">
+      <ul className="grid grid-cols-4 gap-3 max-w-64 items-center">
         <li>
           <a href={`mailto:${email}`} rel="noreferrer" title="Send me an email" target="_blank">
             <i className="lni lni-envelope-1" aria-hidden="true"></i><div className="sr-only">email</div>

@@ -14,7 +14,7 @@
 
 .dark {
   --gray: #c4c4c4;
-  --background: #0a0a0a;
+  --background: #1e1e1e;
   --background-gray: #1c1b1b;
   --background-shade: hsl(358.59deg 34.98% 57.65% / 8%);
   --foreground: #ededed;
@@ -22,6 +22,8 @@
 
 html {
   background: var(--background-gray);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -103,17 +105,16 @@ button:focus {
   }
 }
 
-i.lni {
-  color: var(--brand);
-  font-size: 1.2rem;
-}
-
 header,
 footer {
   background: var(--background-gray);
   i.lni {
-    font-size: 1.8rem;
+    font-size: 24px;
   }
+}
+
+.menu li {
+  height: 24px;
 }
 
 .layout {
@@ -129,10 +130,6 @@ footer {
     letter-spacing: 0.0365rem;
     padding: 0 0 5rem 0;
   }
-}
-
-#portfolio {
-  background-color: var(--background-gray);
 }
 
 .portfolio__list {
@@ -171,7 +168,7 @@ footer {
   background-blend-mode: normal;
 }
 
-.credentials__list li {
+.skills__list li {
   font-size: 1.25rem;
   line-height: 1.9;
   letter-spacing: 0.0365rem;
@@ -202,7 +199,7 @@ footer {
   }
 }
 
-.credentials__specs,
+.skills__specs,
 .portfolio__details {
   li {
     position: relative;

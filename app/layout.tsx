@@ -19,8 +19,8 @@ const robotoSlab = Roboto_Slab({
 
 export const metadata: Metadata = {
   title: "Kyle Levitan | Full-Stack Web Developer & Designer",
-  description: "Kyle Levitan is a skilled web developer and designer based in Asheville, NC, specializing in Drupal, WordPress, Craft CMS, React, and Next.js. Offering professional solutions for custom websites, eCommerce, and content management systems.",
-  keywords: "Kyle Levitan, web developer, web designer, full-stack developer, Drupal, WordPress, Craft CMS, React, Next.js, web development Asheville, CMS development, front-end, back-end, eCommerce, custom websites",
+  description: "Kyle Levitan is a skilled web developer and designer based in Asheville, NC, specializing in Drupal, WordPress, Craft CMS, React, and Next.js. Offering professional solutions for custom websites, applications, and content management systems.",
+  keywords: "Kyle Levitan, web developer, web designer, full-stack developer, Drupal, WordPress, Craft CMS, React, Next.js, web development Asheville, CMS development, front-end, back-end, applications, custom websites",
   robots: "index, follow"
 };
 

@@ -29,9 +29,9 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ type, list }) => {
   }
 
   return (
-    <li className="mt-3 pt-3 border-t-2">
-      <div className="border-t border-gray-100 pt-4 first:border-0 first:pt-0">
-        <button className="flex items-center justify-between w-full" onClick={handleSkillsClick}>
+    <li className="accordion-item mt-3 pt-3 border-t-2 border-[var(--background)] first:border-0 first:pt-0">
+      <div className="accordion-item-content pt-4">
+        <button className="flex text-left items-center justify-between w-full gap-3" onClick={handleSkillsClick}>
           {type}
           {isExpanded ? <ChevronUp/> : <ChevronDown/>}
         </button>
@@ -39,7 +39,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ type, list }) => {
           <ul className="space-y-2 pl-4">
             {list.map((item, index) => (
               <li className="w-full flex gap-2 items-center" key={index}>
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--gray)]"></span>
+                <span className="w-1.5 h-1.5 rounded-full aspect-[1] bg-[var(--gray)]"></span>
                 {item}
               </li>
             ))}
