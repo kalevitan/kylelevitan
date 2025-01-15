@@ -3,8 +3,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import projects from "./projects.json"
-import 'swiper/css';
-import 'swiper/css/pagination';
 
 const Project = dynamic(() => import('./project'), {
   loading: () => <p>Loading...</p>,

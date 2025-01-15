@@ -6,12 +6,13 @@
     "features": [
       "Next.js",
       "TypeScript",
-      "CSS",
-      "Tailwind CSS",
       "Google Cloud Platform",
       "Google Maps",
       "Google Places",
-      "Firebase"
+      "Firebase",
+      "CSS",
+      "Tailwind CSS",
+      "Design"
     ],
     "image": "/projects/bikelock-finder.jpg",
     "link": "https://bike-lock-finder.vercel.app",
@@ -26,10 +27,9 @@
     "features": [
       "Next.js",
       "TypeScript",
+      "Motion",
       "CSS",
       "Tailwind CSS",
-      "Framer Motion",
-      "Cloudflare Pages",
       "Design"
     ],
     "image": "/projects/levitan-portfolio.jpg",
@@ -109,8 +109,8 @@
     "features": [
       "Drupal",
       "JavaScript",
-      "CSS",
       "Social APIs",
+      "CSS",
       "Design"
     ],
     "image": "/projects/signtheagreement.jpg",

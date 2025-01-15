@@ -16,8 +16,7 @@
     "next": "15.1.2",
     "postcss-nested": "7.0.2",
     "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "swiper": "11.1.14"
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
