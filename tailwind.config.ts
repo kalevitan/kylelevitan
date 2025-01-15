@@ -13,7 +13,7 @@ const config: Config = {
     },
     extend: {
       gridTemplateColumns: {
-        core: "1fr min(960px, 100%) 1fr",
+        core: "1fr min(1024px, 100%) 1fr",
       },
       colors: {
         background: "var(--background)",
