@@ -60,7 +60,7 @@
   {
     "name": "Henco Reprographics",
     "type": "Website",
-    "description": "Henco Reprographics is a WordPress website created for a local business specializing in printing and reprography services. Users can explore the range of services offered and conveniently request a customized quote by uploading their documents for print evaluation.",
+    "description": "Henco Reprographics is a WordPress website built for a printing business, allowing users to request custom quotes by uploading documents for evaluation. I developed custom JavaScript for dynamic form validations, interactivity, and document previews, while implementing server-side scripts for secure document processing. Additionally, I created a custom theme to ensure the site flowed smoothly and aligned with the business's brand.",
     "features": [
       "WordPress",
       "JavaScript",
@@ -76,7 +76,7 @@
   {
     "name": "Trinity United Methodist Church",
     "type": "Website",
-    "description": "Trinity United Methodist Church's Drupal 7 website served as a hub for information about the church's services and events. I collaborated with the church to design and develop a complete branding package, including a logo, stationery, photography, and a website that aligned with their values and mission.",
+    "description": "Trinity United Methodist Church's Drupal 7 website served as a central hub for sharing information about services, events, and community outreach. I collaborated with Trinity United Methodist Church as a client to design and develop a comprehensive branding package, which included a logo, stationery, photography, and a website that aligned with their values and mission.",
     "features": [
       "Drupal",
       "JavaScript",
@@ -91,7 +91,7 @@
   {
     "name": "Program Services",
     "type": "Website",
-    "description": "Program Services was a Ruby on Rails application offering quality continuing education courses for mental health professionals. I contributed to the development of the website’s frontend, focusing on enhancing the user experience and ensuring an intuitive interface.",
+    "description": "As a collaborator on Program Services, a Ruby on Rails application offering continuing education courses for mental health professionals, I worked closely with the client to implement a cost-effective approach. I contributed to the website’s frontend development, focusing on delivering an intuitive user experience while aligning with the client’s budget-conscious goals.",
     "features": [
       "Ruby on Rails",
       "JavaScript",
@@ -105,7 +105,7 @@
   {
     "name": "Sign The Climate Agreement",
     "type": "Web Application",
-    "description": "Sign The Climate Agreement was a Drupal 7 website that allowed users to sign a petition to support the Paris Climate Agreement and share to a user's desired social platform.",
+    "description": "Sign The Climate Agreement was a Drupal 7 web application built for a client passionate about climate action. It enabled users to pledge support for the Paris Climate Agreement, upload photos, and share their commitment across social media using #ClimateSign. The platform provided an easy, cost-effective way for advocates to amplify their message and inspire global impact.",
     "features": [
       "Drupal",
       "JavaScript",
