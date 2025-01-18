@@ -7,15 +7,23 @@
       "skills": [
         {
           "type": "Languages",
-          "list": ["CSS/Sass", "HTML", "JavaScript"]
+          "list": ["CSS/Sass", "HTML", "JavaScript", "TypeScript"]
         },
         {
           "type": "Frameworks & Libraries",
-          "list": ["React", "Next.js", "Vue"]
+          "list": ["React", "Next.js", "Vue", "Alpine.js"]
         },
         {
           "type": "Design Systems",
           "list": ["Tailwind CSS", "Storybook", "Pattern Lab", "Bootstrap"]
+        },
+        {
+          "type": "State Management",
+          "list": ["React Context API"]
+        },
+        {
+          "type": "UI/UX Design",
+          "list": ["User-Centered Design", "Wireframing (Figma, Adobe XD, Photoshop)", "Responsive Design", "Web Accessibility (WCAG, ARIA, a11y best practices)"]
         }
       ]
     },
@@ -30,7 +38,7 @@
         },
         {
           "type": "Frameworks",
-          "list": ["Drupal", "Symfony", "WordPress"]
+          "list": ["Drupal", "Symfony", "WordPress", "Craft CMS"]
         },
         {
           "type": "APIs & Databases",
@@ -39,7 +47,15 @@
         {
           "type": "Mapping & Visualization APIs",
           "list": ["Google Maps/Places", "Leaflet", "Mapbox", "Esri"]
-        }
+        },
+        {
+        "type": "Authentication",
+        "list": [
+          "Google Authentication (OAuth 2.0)",
+          "Firebase Authentication",
+          "SimpleSAMLphp",
+          "SSO Integration"
+        ]}
       ]
     },
     {
@@ -54,6 +70,10 @@
         {
           "type": "Testing & Debugging",
           "list": ["Cypress", "Backstop.js", "Behat", "Xdebug"]
+        },
+        {
+          "type": "Environment & Deployment Tools",
+          "list": ["Terminus", "Docker", "Lando", "Docksal", "DDEV"]
         }
       ]
     },
@@ -63,12 +83,16 @@
       "category": "Workflows",
       "skills": [
         {
-          "type": "Development Environments",
-          "list": ["Docker Compose", "Lando", "Docksal", "DDEV"]
+          "type": "Version Control & DevOps",
+          "list": ["Git", "Bitbucket Pipelines", "GitHub Actions", "Jenkins", "CircleCI"]
         },
         {
-          "type": "Version Control & DevOps",
-          "list": ["Git", "Bitbucket Pipelines", "GitHub Actions", "CircleCI"]
+          "type": "Agile Methodologies",
+          "list": ["Agile", "Scrum", "Kanban", "Sprint Planning", "Standups", "Retrospectives"]
+        },
+        {
+          "type": "Project Management & Collaboration Tools",
+          "list": ["Jira", "Trello", "Slack", "Confluence", "Asana"]
         }
       ]
     }

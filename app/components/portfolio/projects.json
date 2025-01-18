@@ -90,7 +90,7 @@
   },
   {
     "name": "Program Services",
-    "type": "Website",
+    "type": "Web Application",
     "description": "As a collaborator on Program Services, a Ruby on Rails application offering continuing education courses for mental health professionals, I worked closely with the client to implement a cost-effective approach. I contributed to the website’s frontend development, focusing on delivering an intuitive user experience while aligning with the client’s budget-conscious goals.",
     "features": [
       "Ruby on Rails",
