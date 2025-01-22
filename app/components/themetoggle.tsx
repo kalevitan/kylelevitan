@@ -53,9 +53,9 @@ const ThemeToggle = () => {
       type="button"
     >
       {isDarkMode ? (
-        <Moon color={"var(--brand)"} aria-hidden="true" />
-      ) : (
         <Sun color={"var(--brand)"} aria-hidden="true" />
+      ) : (
+        <Moon color={"var(--brand)"} aria-hidden="true" />
       )}
     </button>
   );
