@@ -10,6 +10,11 @@
   --background-gray: #f7f7f7;
   --background-shade: hsl(178.59deg 34.98% 47.65% / 8%);
   --foreground: #171717;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 .dark {
@@ -22,8 +27,6 @@
 
 html {
   background: var(--background-gray);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -105,8 +108,8 @@ button:focus {
   }
 }
 
-header,
-footer {
+header:not(article header),
+footer:not(article footer) {
   background: var(--background-gray);
   i.lni {
     font-size: 24px;

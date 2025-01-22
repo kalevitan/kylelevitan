@@ -8,13 +8,12 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({ title, children, classes }) => {
-
   return (
-    <section id={title} className={`section section--panel py-6 md:py-24 ${classes}`}>
+    <div className={`section section--panel py-6 md:py-24 ${classes}`}>
       <div className="grid grid-cols-core">
         {children}
       </div>
-    </section>
+    </div>
   );
 };
 

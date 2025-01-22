@@ -23,7 +23,7 @@
         },
         {
           "type": "UI/UX Design",
-          "list": ["User-Centered Design", "Wireframing (Figma, Adobe XD, Photoshop)", "Responsive Design", "Web Accessibility (WCAG, ARIA, a11y best practices)"]
+          "list": ["User-Centered Design", "Responsive Design", "Web Accessibility (WCAG, ARIA, a11y best practices)"]
         }
       ]
     },
@@ -42,7 +42,7 @@
         },
         {
           "type": "APIs & Databases",
-          "list": ["MySQL", "Firestore", "REST", "GraphQL"]
+          "list": ["MySQL", "Firestore", "Express.js", "REST", "GraphQL"]
         },
         {
           "type": "Mapping & Visualization APIs",

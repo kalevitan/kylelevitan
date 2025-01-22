@@ -38,8 +38,28 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${sourceSans3.variable} ${robotoSlab.variable} font-sans`}
+      suppressHydrationWarning
     >
-      <body>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function getInitialTheme() {
+                  const savedTheme = localStorage.getItem('theme')
+                  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+                  return savedTheme === 'dark' || (!savedTheme && systemPrefersDark)
+                }
+
+                if (getInitialTheme()) {
+                  document.documentElement.classList.add('dark')
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body suppressHydrationWarning>
         <LazyMotion features={domAnimation}>
           {children}
         </LazyMotion>
