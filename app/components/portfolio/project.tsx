@@ -57,7 +57,7 @@ const Project: React.FC<ProjectProps> = ({
             src={image}
             alt={`Screenshot of ${name} project`}
             width={620}
-            height={620}
+            height={345}
             priority
           />
         </figure>

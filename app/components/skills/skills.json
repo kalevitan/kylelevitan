@@ -34,7 +34,7 @@
       "skills": [
         {
           "type": "Languages",
-          "list": ["PHP", "Python", "Ruby"]
+          "list": ["PHP", "JavaScript", "Python", "Ruby"]
         },
         {
           "type": "Frameworks",
