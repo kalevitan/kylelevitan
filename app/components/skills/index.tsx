@@ -60,7 +60,7 @@ const Skills: React.FC = () => {
       </div>
       <div className="layout xl:!col-span-3 xl:mx-40 2xl:mx-60 mx-0 !px-0">
         <section aria-label="Skills Categories">
-          <div className="skills__content grid gap-6 grid-cols-1 md:grid-cols-12">
+          <div className="skills__content grid gap-6 grid-cols-1 md:grid-cols-12 max-w-[1472px] m-auto">
             {skills.skills.map((credential) => (
               <div
                 className={`skills__list flex flex-col p-12 shadow-sm border-spacing-2 rounded items-start gap-6 ${

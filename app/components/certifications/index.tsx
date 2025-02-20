@@ -15,7 +15,7 @@ const Certifications: React.FC = () => {
       </div>
       <div className="layout xl:!col-span-3 xl:mx-40 2xl:mx-60 mx-0 !px-0">
         <section aria-label="Certification List">
-          <div className="skills__content grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center px-4 lg:px-0">
+          <div className="skills__content grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center px-4 lg:px-0 max-w-[1472px] m-auto">
             <div className="drupal-developer emblem rounded-full shadow-sm gradient-right p-8 min-w-fit place-content-center aspect-[1]">
               <h3>Drupal Developer</h3>
               <p>
