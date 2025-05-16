@@ -11,11 +11,11 @@
         },
         {
           "type": "Frameworks & Libraries",
-          "list": ["React", "Next.js", "Vue", "Alpine.js"]
+          "list": ["React", "Next.js", "Vue", "Alpine.js", "Angular"]
         },
         {
           "type": "Design Systems",
-          "list": ["Tailwind CSS", "Storybook", "Pattern Lab", "Bootstrap"]
+          "list": ["Tailwind CSS", "Shadcn/UI", "Storybook", "Pattern Lab", "Bootstrap"]
         },
         {
           "type": "State Management",
@@ -34,15 +34,15 @@
       "skills": [
         {
           "type": "Languages",
-          "list": ["PHP", "JavaScript", "Python", "Ruby"]
+          "list": ["JavaScript", "PHP", "Python", "Ruby"]
         },
         {
           "type": "Frameworks",
-          "list": ["Drupal", "Symfony", "WordPress", "Craft CMS"]
+          "list": ["Payload CMS", "Drupal", "Symfony", "WordPress", "Craft CMS"]
         },
         {
           "type": "APIs & Databases",
-          "list": ["MySQL", "Firestore", "Express.js", "REST", "GraphQL"]
+          "list": ["PostgreSQL", "MySQL", "Firestore", "Express.js", "REST", "GraphQL"]
         },
         {
           "type": "Mapping & Visualization APIs",
@@ -54,7 +54,8 @@
           "Google Authentication (OAuth 2.0)",
           "Firebase Authentication",
           "SimpleSAMLphp",
-          "SSO Integration"
+          "SSO Integration",
+          "NextAuth.js"
         ]}
       ]
     },
@@ -69,7 +70,7 @@
         },
         {
           "type": "Testing & Debugging",
-          "list": ["Cypress", "Backstop.js", "Behat", "Xdebug"]
+          "list": ["Cypress", "Backstop.js", "Playwright", "Behat", "Xdebug"]
         },
         {
           "type": "Environment & Deployment Tools",
