@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { Viewport } from 'next'
 import { Source_Sans_3, Roboto_Slab } from 'next/font/google';
 import { LazyMotion, domAnimation } from "motion/react"
+import { GoogleAnalytics } from "@next/third-parties/google";
 import 'lineicons/dist/lineicons.css';
 import "./globals.css";
 
@@ -63,6 +64,7 @@ export default function RootLayout({
         <LazyMotion features={domAnimation}>
           {children}
         </LazyMotion>
+        <GoogleAnalytics gaId="G-GWV3Q55NPY" />
       </body>
     </html>
   );
