@@ -1,0 +1,23 @@
+{
+  "name": "Kyle Levitan - Full-Stack Web Developer & Designer",
+  "short_name": "Kyle Levitan",
+  "description": "Kyle Levitan is a skilled web developer and designer based in Asheville, NC, specializing in React, and Next.js, Drupal, WordPress, Craft CMS, and more.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#bf3b46",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait-primary",
+  "categories": ["business", "portfolio", "developer"]
+}

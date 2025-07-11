@@ -4,15 +4,40 @@ import Skills from "./components/skills";
 import Certifications from "./components/certifications";
 import Menu from "./components/menu";
 import ThemeToggle from "./components/themetoggle";
+import { generatePortfolioStructuredData, generateBreadcrumbStructuredData } from './lib/seo';
 import dynamic from 'next/dynamic';
 
 const Portfolio = dynamic(() => import('./components/portfolio'), {
   loading: () => <p className="text-center p-4">Loading portfolio items...</p>,
 });
 
+// Import projects data for structured data
+import projects from './components/portfolio/projects.json';
+
 export default function Home() {
+  const portfolioStructuredData = generatePortfolioStructuredData(projects);
+  const breadcrumbStructuredData = generateBreadcrumbStructuredData([
+    { name: 'Home', url: '/' },
+    { name: 'Portfolio', url: '/#portfolio' },
+    { name: 'Skills', url: '/#skills' },
+    { name: 'Certifications', url: '/#certifications' },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(portfolioStructuredData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbStructuredData),
+        }}
+      />
+
       <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
         Skip to main content
       </a>

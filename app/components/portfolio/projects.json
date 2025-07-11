@@ -1,8 +1,8 @@
 [
   {
-    "name": "BikeLock Finder",
-    "type": "Web Application",
-    "description": "BikeLock Finder is a web app designed to help users locate or contribute safe and nearby bike lock stations. By integrating mapping tools and real-time location data, it provides a user-friendly interface for finding or adding secure bike storage options. This application aims to enhance convenience and promote safe biking practices, delivering a practical solution for urban cyclists.",
+    "name": "Dockly",
+    "type": "Progressive Web App",
+    "description": "Dockly is a Progressive Web App (PWA) designed to help users locate or contribute safe and nearby bike lock stations. By integrating mapping tools and real-time location data, it provides a user-friendly interface for finding or adding secure bike storage options. This application aims to enhance convenience and promote safe biking practices, delivering a practical solution for urban cyclists.",
     "features": [
       "Next.js",
       "TypeScript",
@@ -14,10 +14,10 @@
       "Tailwind CSS",
       "Design"
     ],
-    "image": "/projects/bikelock-finder.jpg",
-    "link": "https://bike-lock-finder.vercel.app",
-    "source": "https://github.com/kalevitan/bike-lock-finder",
-    "purpose": "MVP",
+    "image": "/projects/dockly.png",
+    "link": "https://dockly.bike",
+    "source": "",
+    "purpose": "Venture",
     "year": "2024"
   },
     {
