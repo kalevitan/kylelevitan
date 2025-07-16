@@ -9,7 +9,7 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ title, children, classes }) => {
   return (
-    <div className={`section section--panel section--panel--${title} py-6 md:py-24 ${classes}`}>
+    <div id={title} className={`section section--panel section--panel--${title} py-6 md:py-24 ${classes}`}>
       <div className="grid grid-cols-core">
         {children}
       </div>
