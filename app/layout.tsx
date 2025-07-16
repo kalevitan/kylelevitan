@@ -103,6 +103,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="canonical" href="https://kylelevitan.com/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
