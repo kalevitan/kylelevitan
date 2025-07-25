@@ -25,7 +25,10 @@ const Portfolio: React.FC = () => {
         <section aria-label="Portfolio Projects">
           <ul className="portfolio__list grid gap-14 mb-8 list-none" role="list">
             {projects?.map((project, index) => (
-              <li className="project sm:contents" key={project.name || index}>
+              <li
+                className="project sm:contents"
+                key={project.name || index}
+              >
                 <Project
                   name={project.name}
                   type={project.type}
