@@ -31,8 +31,18 @@ export const Header: React.FC = () => {
                               <motion.div
                   className="header__cta"
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                  animate={{
+                    opacity: 1,
+                    y: [0, -8, 0],
+                  }}
+                  transition={{
+                    opacity: { duration: 0.6, delay: 0.3, ease: "easeOut" },
+                    y: { duration: 0.6, delay: 0.8, ease: "easeInOut", times: [0, 0.5, 1] }
+                  }}
+                  whileHover={{
+                    y: [0, -8, 0],
+                    transition: { duration: 0.4, ease: "easeInOut" }
+                  }}
                 >
                   <a
                     href="#portfolio"

@@ -24,14 +24,21 @@ const Project: React.FC<ProjectProps> = ({
   link,
   source,
   purpose,
-  year
+  year,
 }) => {
   return (
     <article className="portfolio__slide relative p-8 sm:p-12 rounded grid auto-flow-col gap-0 sm:gap-14 md:grid-cols-[1fr,45%] xlg:grid-cols-[1fr,35%] items-center max-w-[1472px]">
       <div className="portfolio__details--wrapper flex flex-col">
         <header className="portfolio__header flex flex-col">
-          <span className="text-[var(--gray)] text-sm" role="doc-subtitle">{type}</span>
-          <h3 id={`project-${name.toLowerCase().replace(/\s+/g, '-')}`} className="mb-0">{name}</h3>
+          <span className="text-[var(--gray)] text-sm" role="doc-subtitle">
+            {type}
+          </span>
+          <h3
+            id={`project-${name.toLowerCase().replace(/\s+/g, "-")}`}
+            className="mb-0"
+          >
+            {name}
+          </h3>
         </header>
         {description && (
           <div className="portfolio__description my-4">
@@ -52,21 +59,28 @@ const Project: React.FC<ProjectProps> = ({
         </footer>
       </div>
       <div className="portfolio__image-wrapper pt-8 sm:pt-0">
-        <figure className="portfolio__image relative border-gray-400 rounded border-opacity-25 shadow-md object-contain max-h-[335px] overflow-hidden">
+        <figure className="portfolio__image relative border-gray-400 rounded border-opacity-25 shadow-md h-[250px] sm:h-[345px] flex items-center justify-center overflow-hidden">
           <Image
             src={image}
             alt={`Screenshot of ${name} project`}
-            width={620}
-            height={345}
+            width={1240}
+            height={690}
             priority
+            className="w-full h-full object-cover"
           />
         </figure>
         {features && features.length > 0 && (
           <div className="technologies-used">
             <h4 className="sr-only">Technologies Used</h4>
-            <ul className="portfolio__details flex flex-wrap gap-2 my-5" role="list">
+            <ul
+              className="portfolio__details flex flex-wrap gap-2 my-5"
+              role="list"
+            >
               {features.map((feature, index) => (
-                <li className="flex items-center px-4 py-2 rounded-2xl bg-[var(--background-gray)]" key={index}>
+                <li
+                  className="flex items-center px-4 py-2 rounded-2xl bg-[var(--background-gray)]"
+                  key={index}
+                >
                   {feature}
                 </li>
               ))}
@@ -84,7 +98,10 @@ const Project: React.FC<ProjectProps> = ({
                 aria-label={`Visit ${name} live site`}
               >
                 <div className="p-3 rounded-lg bg-[var(--brand-opaque)] bg-opacity-10">
-                  <ExternalLink className="w-5 h-5 text-[var(--brand)]" aria-hidden="true" />
+                  <ExternalLink
+                    className="w-5 h-5 text-[var(--brand)]"
+                    aria-hidden="true"
+                  />
                 </div>
               </a>
             )}
@@ -97,7 +114,10 @@ const Project: React.FC<ProjectProps> = ({
                 aria-label={`View ${name} source code`}
               >
                 <div className="p-3 rounded-lg bg-[var(--brand-opaque)] bg-opacity-10">
-                  <Code2 className="w-5 h-5 text-[var(--brand)]" aria-hidden="true" />
+                  <Code2
+                    className="w-5 h-5 text-[var(--brand)]"
+                    aria-hidden="true"
+                  />
                 </div>
               </a>
             )}
@@ -106,6 +126,6 @@ const Project: React.FC<ProjectProps> = ({
       </div>
     </article>
   );
-}
+};
 
 export default Project;

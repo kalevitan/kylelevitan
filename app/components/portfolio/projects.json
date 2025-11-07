@@ -1,5 +1,26 @@
 [
   {
+    "name": "Campfire",
+    "type": "Progressive Web App",
+    "description": "Campfire is a social planning Progressive Web App (PWA) designed to help friends organize gatherings and events effortlessly. With features like event suggestions, calendar integration, and group messaging, Campfire makes it easy to coordinate plans with your social circle. The app provides an intuitive interface for creating events, tracking RSVPs, and staying connected with friends.",
+    "features": [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "OAuth",
+      "Google Places API",
+      "Push Notifications",
+      "Calendar Integration",
+      "Tailwind CSS",
+      "Design"
+    ],
+    "image": "/projects/campfire.png",
+    "link": "",
+    "source": "",
+    "purpose": "Venture",
+    "year": "2025"
+  },
+  {
     "name": "Dockly",
     "type": "Progressive Web App",
     "description": "Dockly is a Progressive Web App (PWA) designed to help users locate or contribute safe and nearby bike lock stations. By integrating mapping tools and real-time location data, it provides a user-friendly interface for finding or adding secure bike storage options. This application aims to enhance convenience and promote safe biking practices, delivering a practical solution for urban cyclists.",
@@ -7,10 +28,10 @@
       "Next.js",
       "TypeScript",
       "Google Cloud Platform",
+      "OAuth",
       "Google Maps",
-      "Google Places",
+      "Google Places API",
       "Firebase",
-      "CSS",
       "Tailwind CSS",
       "Design"
     ],
@@ -18,24 +39,6 @@
     "link": "https://dockly.bike",
     "source": "",
     "purpose": "Venture",
-    "year": "2024"
-  },
-    {
-    "name": "My Portfolio",
-    "type": "Website",
-    "description": "My portfolio site has been a dynamic project, evolving through multiple iterations as I refine its design and functionality. Beyond showcasing my work, it has served as a testing ground for exploring new tools, frameworks, and techniques. From experimenting with modern JavaScript libraries to implementing responsive design and performance optimizations, this site reflects my continuous learning and passion for creating intuitive, polished web experiences.",
-    "features": [
-      "Next.js",
-      "TypeScript",
-      "Motion",
-      "CSS",
-      "Tailwind CSS",
-      "Design"
-    ],
-    "image": "/projects/levitan-portfolio.jpg",
-    "link": "",
-    "source": "https://github.com/kalevitan/kylelevitan",
-    "purpose": "Personal",
     "year": "2024"
   },
   {
@@ -61,13 +64,7 @@
     "name": "Henco Reprographics",
     "type": "Website",
     "description": "Henco Reprographics is a WordPress website built for a printing business, allowing users to request custom quotes by uploading documents for evaluation. I developed custom JavaScript for dynamic form validations, interactivity, and document previews, while implementing server-side scripts for secure document processing. Additionally, I created a custom theme to ensure the site flowed smoothly and aligned with the business's brand.",
-    "features": [
-      "WordPress",
-      "JavaScript",
-      "CSS",
-      "Design",
-      "Branding"
-    ],
+    "features": ["WordPress", "JavaScript", "CSS", "Design", "Branding"],
     "image": "/projects/hencoreprographics.jpg",
     "link": "http://hencorepro.com/",
     "purpose": "Freelance",
@@ -77,13 +74,7 @@
     "name": "Trinity United Methodist Church",
     "type": "Website",
     "description": "Trinity United Methodist Church's Drupal 7 website served as a central hub for sharing information about services, events, and community outreach. I collaborated with Trinity United Methodist Church as a client to design and develop a comprehensive branding package, which included a logo, stationery, photography, and a website that aligned with their values and mission.",
-    "features": [
-      "Drupal",
-      "JavaScript",
-      "CSS",
-      "Design",
-      "Branding"
-    ],
+    "features": ["Drupal", "JavaScript", "CSS", "Design", "Branding"],
     "image": "/projects/trinitywavl.jpg",
     "purpose": "Freelance",
     "year": "2018"
@@ -92,12 +83,7 @@
     "name": "Program Services",
     "type": "Web Application",
     "description": "As a collaborator on Program Services, a Ruby on Rails application offering continuing education courses for mental health professionals, I worked closely with the client to implement a cost-effective approach. I contributed to the website’s frontend development, focusing on delivering an intuitive user experience while aligning with the client’s budget-conscious goals.",
-    "features": [
-      "Ruby on Rails",
-      "JavaScript",
-      "CSS",
-      "Design"
-    ],
+    "features": ["Ruby on Rails", "JavaScript", "CSS", "Design"],
     "image": "/projects/program-services.jpg",
     "purpose": "Freelance",
     "year": "2018"
@@ -106,13 +92,7 @@
     "name": "Sign The Climate Agreement",
     "type": "Web Application",
     "description": "Sign The Climate Agreement was a Drupal 7 web application built for a client passionate about climate action. It enabled users to pledge support for the Paris Climate Agreement, upload photos, and share their commitment across social media using #ClimateSign. The platform provided an easy, cost-effective way for advocates to amplify their message and inspire global impact.",
-    "features": [
-      "Drupal",
-      "JavaScript",
-      "Social APIs",
-      "CSS",
-      "Design"
-    ],
+    "features": ["Drupal", "JavaScript", "Social APIs", "CSS", "Design"],
     "image": "/projects/signtheagreement.jpg",
     "purpose": "Freelance",
     "year": "2016"
