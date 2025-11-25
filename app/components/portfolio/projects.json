@@ -1,21 +1,20 @@
 [
   {
     "name": "Campfire",
-    "type": "Progressive Web App",
-    "description": "Campfire is a social planning Progressive Web App (PWA) designed to help friends organize gatherings and events effortlessly. With features like event suggestions, calendar integration, and group messaging, Campfire makes it easy to coordinate plans with your social circle. The app provides an intuitive interface for creating events, tracking RSVPs, and staying connected with friends.",
+    "type": "iOS and Android Mobile App",
+    "description": "Campfire is a social planning app designed to help friends organize gatherings and events effortlessly. With features like event suggestions, calendar integration, and group messaging, Campfire makes it easy to coordinate plans with your social circle. The app provides an intuitive interface for creating events, tracking RSVPs, and staying connected with friends.",
     "features": [
-      "Next.js",
+      "Expo",
+      "React Native",
       "TypeScript",
       "Supabase",
-      "OAuth",
-      "Google Places API",
       "Push Notifications",
       "Calendar Integration",
-      "Tailwind CSS",
+      "Location Services",
       "Design"
     ],
     "image": "/projects/campfire.png",
-    "link": "",
+    "link": "https://campfire.rsvp",
     "source": "",
     "purpose": "Venture",
     "year": "2025"

@@ -17,13 +17,12 @@ const Portfolio: React.FC = () => {
           <div className="portfolio__introduction">
             <p className="lead" role="doc-subtitle">
               Below are selected projects showcasing my freelance work and
-              business ventures. I specialize in building Single Page
-              Applications (SPAs) that function as Progressive Web Apps (PWAs),
-              delivering fast, reliable, and engaging experiences across all
-              devices. Each project highlights tailored solutions and
-              results-oriented strategies, crafted to meet the unique needs of
-              diverse clients while demonstrating my passion for innovation and
-              solving real-world problems.
+              personal ventures. I specialize in building Single Page
+              Applications (SPAs) and Progressive Web Apps (PWAs), as well as
+              native iOS and Android applications—delivering fast, reliable, and
+              engaging experiences across all platforms. Whether building for
+              clients or bringing my own ideas to life, each project reflects
+              tailored solutions and a passion for innovation.
             </p>
           </div>
         </section>
