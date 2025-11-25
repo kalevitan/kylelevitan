@@ -1,8 +1,15 @@
 // components/Index.tsx
-'use client';
+"use client";
 import React from "react";
 import skillsData from "./skills.json";
-import { LucideProps, Layout, Server, Code2, Workflow } from "lucide-react";
+import {
+  LucideProps,
+  Layout,
+  Server,
+  Code2,
+  Workflow,
+  Sparkles,
+} from "lucide-react";
 import Accordion from "./accordion";
 
 interface Skill {
@@ -39,6 +46,7 @@ const Skills: React.FC = () => {
     Server,
     Code2,
     Workflow,
+    Sparkles,
   };
 
   const DynamicIcon: React.FC<IconProps> = ({ iconName, ...props }) => {
@@ -53,7 +61,11 @@ const Skills: React.FC = () => {
           <h2 id="skills-heading">Technical Skills</h2>
           <div className="skills__introduction">
             <p className="lead">
-              This is a curated list of languages, technologies, and frameworks that I&apos;ve worked with across various projects. While my experience with each varies, what excites me most is exploring and adapting to new tools and approaches. Ultimately, it&apos;s all about choosing the right solution for the project.
+              This is a curated list of languages, technologies, and frameworks
+              that I&apos;ve worked with across various projects. While my
+              experience with each varies, what excites me most is exploring and
+              adapting to new tools and approaches. Ultimately, it&apos;s all
+              about choosing the right solution for the project.
             </p>
           </div>
         </section>
@@ -64,7 +76,9 @@ const Skills: React.FC = () => {
             {skills.skills.map((credential) => (
               <div
                 className={`skills__list flex flex-col p-12 shadow-sm border-spacing-2 rounded items-start gap-6 ${
-                  credential.grid == 'large' ? 'col-span-full md:col-span-7 gradient-left' : 'col-span-full md:col-span-5 gradient-right'
+                  credential.grid == "large"
+                    ? "col-span-full md:col-span-7 gradient-left"
+                    : "col-span-full md:col-span-5 gradient-right"
                 }`}
                 key={credential.category}
               >
@@ -79,9 +93,7 @@ const Skills: React.FC = () => {
                   </div>
                   {credential.category}
                 </h3>
-                <Accordion
-                  items={credential.skills || []}
-                />
+                <Accordion items={credential.skills || []} />
               </div>
             ))}
           </div>
@@ -89,6 +101,6 @@ const Skills: React.FC = () => {
       </div>
     </>
   );
-}
+};
 
 export default Skills;

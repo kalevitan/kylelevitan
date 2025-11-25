@@ -11,11 +11,11 @@
         },
         {
           "type": "Frameworks & Libraries",
-          "list": ["React", "Next.js", "Vue", "Alpine.js", "Angular"]
+          "list": ["React", "React Native", "Expo", "Next.js", "Vue"]
         },
         {
           "type": "Design Systems",
-          "list": ["Tailwind CSS", "Shadcn/UI", "Storybook", "Pattern Lab", "Bootstrap"]
+          "list": ["Tailwind CSS", "Shadcn/UI", "Storybook"]
         },
         {
           "type": "State Management",
@@ -23,7 +23,11 @@
         },
         {
           "type": "UI/UX Design",
-          "list": ["User-Centered Design", "Responsive Design", "Web Accessibility (WCAG, ARIA, a11y best practices)"]
+          "list": [
+            "User-Centered Design",
+            "Responsive Design",
+            "Web Accessibility (WCAG, ARIA, a11y best practices)"
+          ]
         }
       ]
     },
@@ -38,25 +42,35 @@
         },
         {
           "type": "Frameworks",
-          "list": ["Payload CMS", "Drupal", "Symfony", "WordPress", "Craft CMS"]
+          "list": ["Payload CMS", "Drupal", "WordPress"]
         },
         {
           "type": "APIs & Databases",
-          "list": ["PostgreSQL", "MySQL", "Firestore", "Express.js", "REST", "GraphQL"]
+          "list": [
+            "PostgreSQL",
+            "MySQL",
+            "Supabase",
+            "Firestore",
+            "Express.js",
+            "REST",
+            "GraphQL"
+          ]
         },
         {
           "type": "Mapping & Visualization APIs",
           "list": ["Google Maps/Places", "Leaflet", "Mapbox", "Esri"]
         },
         {
-        "type": "Authentication",
-        "list": [
-          "Google Authentication (OAuth 2.0)",
-          "Firebase Authentication",
-          "SimpleSAMLphp",
-          "SSO Integration",
-          "NextAuth.js"
-        ]}
+          "type": "Authentication",
+          "list": [
+            "Google Authentication (OAuth 2.0)",
+            "Supabase Auth",
+            "Firebase Authentication",
+            "SimpleSAMLphp",
+            "SSO Integration",
+            "NextAuth.js"
+          ]
+        }
       ]
     },
     {
@@ -66,15 +80,19 @@
       "skills": [
         {
           "type": "Build Tools",
-          "list": ["Webpack", "Vite", "Babel", "Gulp", "Parcel"]
+          "list": ["Webpack", "Vite"]
         },
         {
-          "type": "Testing & Debugging",
-          "list": ["Cypress", "Backstop.js", "Playwright", "Behat", "Xdebug"]
+          "type": "Testing",
+          "list": ["Cypress", "Playwright"]
         },
         {
-          "type": "Environment & Deployment Tools",
-          "list": ["Terminus", "Docker", "Lando", "Docksal", "DDEV"]
+          "type": "Environment & Deployment",
+          "list": ["Docker", "TestFlight", "EAS"]
+        },
+        {
+          "type": "AI & Development",
+          "list": ["Claude", "GPT-4", "Gemini", "Cursor", "MCP Servers"]
         }
       ]
     },
@@ -85,15 +103,37 @@
       "skills": [
         {
           "type": "Version Control & DevOps",
-          "list": ["Git", "Bitbucket Pipelines", "GitHub Actions", "Jenkins", "CircleCI"]
+          "list": [
+            "Git",
+            "Bitbucket Pipelines",
+            "GitHub Actions",
+            "Xcode Cloud",
+            "CircleCI"
+          ]
         },
         {
           "type": "Agile Methodologies",
-          "list": ["Agile", "Scrum", "Kanban", "Sprint Planning", "Standups", "Retrospectives"]
+          "list": [
+            "Agile",
+            "Scrum",
+            "Kanban",
+            "Sprint Planning",
+            "Standups",
+            "Retrospectives"
+          ]
         },
         {
           "type": "Project Management & Collaboration Tools",
           "list": ["Jira", "Trello", "Slack", "Confluence", "Asana"]
+        },
+        {
+          "type": "Code Review & Quality",
+          "list": [
+            "Pull Request Reviews",
+            "ESLint",
+            "Prettier",
+            "Code Standards"
+          ]
         }
       ]
     }
