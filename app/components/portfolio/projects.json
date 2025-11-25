@@ -17,7 +17,8 @@
     "link": "https://campfire.rsvp",
     "source": "",
     "purpose": "Venture",
-    "year": "2025"
+    "year": "2025",
+    "bgColor": "#1a1a2e"
   },
   {
     "name": "Dockly",
@@ -38,7 +39,8 @@
     "link": "https://dockly.bike",
     "source": "",
     "purpose": "Venture",
-    "year": "2024"
+    "year": "2024",
+    "bgColor": "#6366f1"
   },
   {
     "name": "WeatherTracks",
@@ -57,7 +59,8 @@
     "link": "https://weathertracks.netlify.app",
     "source": "https://github.com/kalevitan/weathertracks",
     "purpose": "MVP",
-    "year": "2021"
+    "year": "2021",
+    "bgColor": "#1db954"
   },
   {
     "name": "Henco Reprographics",
@@ -67,7 +70,8 @@
     "image": "/projects/hencoreprographics.jpg",
     "link": "http://hencorepro.com/",
     "purpose": "Freelance",
-    "year": "2017"
+    "year": "2017",
+    "bgColor": "#1e3a5f"
   },
   {
     "name": "Trinity United Methodist Church",
@@ -76,16 +80,18 @@
     "features": ["Drupal", "JavaScript", "CSS", "Design", "Branding"],
     "image": "/projects/trinitywavl.jpg",
     "purpose": "Freelance",
-    "year": "2018"
+    "year": "2018",
+    "bgColor": "#f5f5f5"
   },
   {
     "name": "Program Services",
     "type": "Web Application",
-    "description": "As a collaborator on Program Services, a Ruby on Rails application offering continuing education courses for mental health professionals, I worked closely with the client to implement a cost-effective approach. I contributed to the website’s frontend development, focusing on delivering an intuitive user experience while aligning with the client’s budget-conscious goals.",
+    "description": "As a collaborator on Program Services, a Ruby on Rails application offering continuing education courses for mental health professionals, I worked closely with the client to implement a cost-effective approach. I contributed to the website's frontend development, focusing on delivering an intuitive user experience while aligning with the client's budget-conscious goals.",
     "features": ["Ruby on Rails", "JavaScript", "CSS", "Design"],
     "image": "/projects/program-services.jpg",
     "purpose": "Freelance",
-    "year": "2018"
+    "year": "2018",
+    "bgColor": "#2c5282"
   },
   {
     "name": "Sign The Climate Agreement",
@@ -94,6 +100,7 @@
     "features": ["Drupal", "JavaScript", "Social APIs", "CSS", "Design"],
     "image": "/projects/signtheagreement.jpg",
     "purpose": "Freelance",
-    "year": "2016"
+    "year": "2016",
+    "bgColor": "#2d6a4f"
   }
 ]

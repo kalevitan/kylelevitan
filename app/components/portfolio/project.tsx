@@ -59,15 +59,19 @@ const Project: React.FC<ProjectProps> = ({
         </footer>
       </div>
       <div className="portfolio__image-wrapper pt-8 sm:pt-0">
-        <figure className="portfolio__image relative border-gray-400 rounded border-opacity-25 shadow-md h-[250px] sm:h-[345px] flex items-center justify-center overflow-hidden">
-          <Image
-            src={image}
-            alt={`Screenshot of ${name} project`}
-            width={1240}
-            height={690}
-            priority
-            className="w-full h-full object-cover"
-          />
+        <figure className="portfolio__image relative h-[250px] sm:h-[345px] flex items-center justify-center">
+          <div className="relative h-full w-full flex items-center justify-center">
+            <div className="overflow-hidden rounded drop-shadow-lg">
+              <Image
+                src={image}
+                alt={`Screenshot of ${name} project`}
+                width={1240}
+                height={690}
+                priority
+                className="max-h-[250px] sm:max-h-[345px] w-auto h-auto object-contain"
+              />
+            </div>
+          </div>
         </figure>
         {features && features.length > 0 && (
           <div className="technologies-used">
