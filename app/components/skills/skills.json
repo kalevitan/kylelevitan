@@ -42,7 +42,7 @@
         },
         {
           "type": "Frameworks",
-          "list": ["Payload CMS", "Drupal", "WordPress"]
+          "list": ["Drupal", "WordPress", "Payload CMS", "Symfony"]
         },
         {
           "type": "APIs & Databases",
