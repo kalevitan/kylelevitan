@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
 
               <div className="header__introduction">
                 <p className="lead">
-                  I&apos;m a software engineer with expertise in crafting frontend and backend solutions for diverse platforms, including Drupal and WordPress. I specialize in modern JavaScript frameworks like React, Next.js, and Vue, and have experience developing APIs with REST and GraphQL. Additionally, I build full-stack applications using Ruby on Rails and leverage my background in system administration and cloud platforms to deliver complete, client-focused solutions.
+                  I&apos;m a software engineer with expertise in crafting frontend and backend solutions for diverse platforms, including Drupal, WordPress, Symfony, and Payload CMS. I specialize in modern JavaScript frameworks like React, Next.js, and Vue, and have experience developing APIs with REST and GraphQL. Additionally, I build full-stack applications using Ruby on Rails and leverage my background in system administration and cloud platforms to deliver complete, client-focused solutions.
                 </p>
               </div>
 

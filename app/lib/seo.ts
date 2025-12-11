@@ -12,6 +12,7 @@ export const SEO_CONFIG = {
   drupalProfile: 'https://www.drupal.org/u/k_a_l',
   email: 'kylelevitan@gmail.com',
   location: 'Asheville, NC',
+  jobTitle: 'Full-Stack Web and Software Developer & Designer',
   image: '/images/Kyle-Levitan_BW.png', // We'll need to create this
   favicon: '/favicon.ico',
 };
@@ -30,7 +31,7 @@ export const generateStructuredData = () => {
       addressRegion: 'NC',
       addressCountry: 'US',
     },
-    jobTitle: 'Full-Stack Web Developer & Designer',
+    jobTitle: `${SEO_CONFIG.jobTitle} based in ${SEO_CONFIG.location}`,
     worksFor: {
       '@type': 'Organization',
       name: 'Freelance',
