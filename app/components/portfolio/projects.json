@@ -1,8 +1,8 @@
 [
   {
-    "name": "Campfire",
+    "name": "Campfire RSVP",
     "type": "iOS and Android Mobile App",
-    "description": "Campfire is a social planning app designed to help friends organize gatherings and events effortlessly. With features like event suggestions, calendar integration, and group messaging, Campfire makes it easy to coordinate plans with your social circle. The app provides an intuitive interface for creating events, tracking RSVPs, and staying connected with friends.",
+    "description": "Campfire RSVP is a social planning app designed to help friends organize gatherings and events effortlessly. With features like event suggestions, calendar integration, and group messaging, Campfire RSVP makes it easy to coordinate plans with your social circle. The app provides an intuitive interface for creating events, tracking RSVPs, and staying connected with friends.",
     "features": [
       "Expo",
       "React Native",
