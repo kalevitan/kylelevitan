@@ -264,6 +264,28 @@ footer:not(article footer) {
     );
 }
 
+.emblem {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emblem h3 {
+  font-size: clamp(1.1rem, 10cqw, 1.6rem);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.emblem p {
+  font-size: clamp(0.85rem, 5.5cqw, 1.1rem);
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.4;
+}
+
 @media (min-width: 768px) {
   .portfolio__slide {
     top: 115px;
