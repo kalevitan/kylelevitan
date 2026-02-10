@@ -2,25 +2,12 @@
 "use client";
 import React from "react";
 import skillsData from "./skills.json";
-import {
-  LucideProps,
-  Layout,
-  Server,
-  Code2,
-  Workflow,
-  Sparkles,
-} from "lucide-react";
-import Accordion from "./accordion";
-
-interface Skill {
-  type: string;
-  list: string[];
-}
+import { LucideProps, Layout, Server, Code2, Sparkles } from "lucide-react";
 
 interface Credential {
   icon: string;
   category: string;
-  skills?: Skill[];
+  items: string[];
   grid: string;
 }
 
@@ -45,7 +32,6 @@ const Skills: React.FC = () => {
     Layout,
     Server,
     Code2,
-    Workflow,
     Sparkles,
   };
 
@@ -58,14 +44,11 @@ const Skills: React.FC = () => {
     <>
       <div className="layout">
         <section aria-labelledby="skills-heading">
-          <h2 id="skills-heading">Technical Skills</h2>
+          <h2 id="skills-heading">Core Competencies</h2>
           <div className="skills__introduction">
             <p className="lead">
-              This is a curated list of languages, technologies, and frameworks
-              that I&apos;ve worked with across various projects. While my
-              experience with each varies, what excites me most is exploring and
-              adapting to new tools and approaches. Ultimately, it&apos;s all
-              about choosing the right solution for the project.
+              These capabilities reflect how I approach day-to-day product engineering, the areas where I consistently apply judgment, make tradeoffs, and deliver impact.
+They represent how I think about building modern software, from interface design through long-term maintainability.
             </p>
           </div>
         </section>
@@ -93,7 +76,13 @@ const Skills: React.FC = () => {
                   </div>
                   {credential.category}
                 </h3>
-                <Accordion items={credential.skills || []} />
+                <div className="space-y-4 text-[var(--gray)]">
+                  {credential.items.map((item, index) => (
+                    <p className="leading-relaxed" key={index}>
+                      {item}
+                    </p>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

@@ -19,16 +19,16 @@ export const Header: React.FC = () => {
             <div className="header__content">
               <h1 id="intro-heading">
                 <span className="header__name">Kyle Levitan</span><br/>
-                developer, designer, &<br/> solution<em>ist</em>.
+                Senior Frontend & Full-Stack Engineer
               </h1>
 
               <div className="header__introduction">
                 <p className="lead">
-                  I&apos;m a software engineer with expertise in crafting frontend and backend solutions for diverse platforms, including Drupal, WordPress, Symfony, and Payload CMS. I specialize in modern JavaScript frameworks like React, Next.js, and Vue, and have experience developing APIs with REST and GraphQL. Additionally, I build full-stack applications using Ruby on Rails and leverage my background in system administration and cloud platforms to deliver complete, client-focused solutions.
+                  I&apos;m a frontend-first engineer building modern web and mobile products with React, React Native, Next.js, and TypeScript. I focus on clean interfaces, performance, accessibility, and scalable architecture that supports real product outcomes.
                 </p>
               </div>
 
-                              <motion.div
+              <motion.div
                   className="header__cta"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{

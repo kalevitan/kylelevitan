@@ -16,13 +16,9 @@ const Portfolio: React.FC = () => {
           <h2 id="portfolio-heading">Portfolio</h2>
           <div className="portfolio__introduction">
             <p className="lead" role="doc-subtitle">
-              Below are selected projects showcasing my freelance work and
-              personal ventures. I specialize in building Single Page
-              Applications (SPAs) and Progressive Web Apps (PWAs), as well as
-              native iOS and Android applications—delivering fast, reliable, and
-              engaging experiences across all platforms. Whether building for
-              clients or bringing my own ideas to life, each project reflects
-              tailored solutions and a passion for innovation.
+              These are some of my recent projects that show how I build and ship modern
+              products across web and mobile - anchored in React, React Native, Next.js, and
+              TypeScript with a product-first mindset.
             </p>
           </div>
         </section>
@@ -43,8 +39,8 @@ const Portfolio: React.FC = () => {
                   features={project.features}
                   link={project.link}
                   source={project.source}
-                  purpose={project.purpose}
-                  year={project.year}
+                  role={project.role}
+                  focus={project.focus}
                 />
               </li>
             ))}

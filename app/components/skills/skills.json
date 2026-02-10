@@ -3,138 +3,36 @@
     {
       "icon": "Layout",
       "grid": "large",
-      "category": "Frontend",
-      "skills": [
-        {
-          "type": "Languages",
-          "list": ["CSS/Sass", "HTML", "JavaScript", "TypeScript"]
-        },
-        {
-          "type": "Frameworks & Libraries",
-          "list": ["React", "React Native", "Expo", "Next.js", "Vue"]
-        },
-        {
-          "type": "Design Systems",
-          "list": ["Tailwind CSS", "Shadcn/UI", "Storybook"]
-        },
-        {
-          "type": "State Management",
-          "list": ["React Context API"]
-        },
-        {
-          "type": "UI/UX Design",
-          "list": [
-            "User-Centered Design",
-            "Responsive Design",
-            "Web Accessibility (WCAG, ARIA, a11y best practices)"
-          ]
-        }
+      "category": "Frontend Engineering",
+      "items": [
+        "I build responsive, accessible, and maintainable user interfaces using React, Next.js, and TypeScript.",
+        "I focus on component architecture, state management, and performance tradeoffs that matter in real products."
+      ]
+    },
+    {
+      "icon": "Sparkles",
+      "grid": "small",
+      "category": "Product & UX",
+      "items": [
+        "I approach engineering with a product mindset - prioritizing clarity, usability, and user flow.",
+        "I translate design intent into implementation while advocating for accessible, intuitive experiences."
       ]
     },
     {
       "icon": "Server",
       "grid": "small",
-      "category": "Backend",
-      "skills": [
-        {
-          "type": "Languages",
-          "list": ["JavaScript", "PHP", "Python", "Ruby"]
-        },
-        {
-          "type": "Frameworks",
-          "list": ["Drupal", "WordPress", "Payload CMS", "Symfony"]
-        },
-        {
-          "type": "APIs & Databases",
-          "list": [
-            "PostgreSQL",
-            "MySQL",
-            "Supabase",
-            "Firestore",
-            "Express.js",
-            "REST",
-            "GraphQL"
-          ]
-        },
-        {
-          "type": "Mapping & Visualization APIs",
-          "list": ["Google Maps/Places", "Leaflet", "Mapbox", "Esri"]
-        },
-        {
-          "type": "Authentication",
-          "list": [
-            "Google Authentication (OAuth 2.0)",
-            "Supabase Auth",
-            "Firebase Authentication",
-            "SimpleSAMLphp",
-            "SSO Integration",
-            "NextAuth.js"
-          ]
-        }
+      "category": "Full-Stack Delivery",
+      "items": [
+        "I'm comfortable owning backend and integration work when needed, designing APIs and data flows that support real frontend requirements without unnecessary complexity."
       ]
     },
     {
       "icon": "Code2",
-      "grid": "small",
-      "category": "Tooling",
-      "skills": [
-        {
-          "type": "Build Tools",
-          "list": ["Webpack", "Vite"]
-        },
-        {
-          "type": "Testing",
-          "list": ["Cypress", "Playwright"]
-        },
-        {
-          "type": "Environment & Deployment",
-          "list": ["Docker", "TestFlight", "EAS"]
-        },
-        {
-          "type": "AI & Development",
-          "list": ["Claude", "GPT-4", "Gemini", "Cursor", "MCP Servers"]
-        }
-      ]
-    },
-    {
-      "icon": "Workflow",
       "grid": "large",
-      "category": "Workflows",
-      "skills": [
-        {
-          "type": "Version Control & DevOps",
-          "list": [
-            "Git",
-            "Bitbucket Pipelines",
-            "GitHub Actions",
-            "Xcode Cloud",
-            "CircleCI"
-          ]
-        },
-        {
-          "type": "Agile Methodologies",
-          "list": [
-            "Agile",
-            "Scrum",
-            "Kanban",
-            "Sprint Planning",
-            "Standups",
-            "Retrospectives"
-          ]
-        },
-        {
-          "type": "Project Management & Collaboration Tools",
-          "list": ["Jira", "Trello", "Slack", "Confluence", "Asana"]
-        },
-        {
-          "type": "Code Review & Quality",
-          "list": [
-            "Pull Request Reviews",
-            "ESLint",
-            "Prettier",
-            "Code Standards"
-          ]
-        }
+      "category": "Quality & Maintainability",
+      "items": [
+        "I favor pragmatic engineering decisions that lead to long-term confidence: simple abstractions, targeted testing, and sustainable patterns.",
+        "Testing tools like Playwright and Cypress are used where they add confidence."
       ]
     }
   ]

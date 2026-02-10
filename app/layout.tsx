@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         url: `${SEO_CONFIG.siteUrl}${SEO_CONFIG.image}`,
         width: 1200,
         height: 630,
-        alt: `${SEO_CONFIG.author} - Full-Stack Web Developer & Designer`,
+        alt: `${SEO_CONFIG.author} - Senior Frontend & Full-Stack Engineer`,
       },
     ],
   },

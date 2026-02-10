@@ -2,105 +2,61 @@
   {
     "name": "Campfire RSVP",
     "type": "iOS and Android Mobile App",
-    "description": "Campfire RSVP is a social planning app designed to help friends organize gatherings and events effortlessly. With features like event suggestions, calendar integration, and group messaging, Campfire RSVP makes it easy to coordinate plans with your social circle. The app provides an intuitive interface for creating events, tracking RSVPs, and staying connected with friends.",
+    "description": "A social planning app for coordinating events with friends. Designed and built end-to-end as a cross-platform experience, including UI, backend integration, and real-time coordination flows.",
     "features": [
-      "Expo",
       "React Native",
+      "Expo",
       "TypeScript",
       "Supabase",
-      "Push Notifications",
-      "Calendar Integration",
-      "Location Services",
-      "Design"
+      "Push notifications"
     ],
+    "role": "Personal product, full ownership",
+    "focus": "Cross-platform UX, performance, real-time interactions",
     "image": "/projects/campfirersvp.png",
     "link": "https://campfire.rsvp",
     "source": "",
-    "purpose": "Venture",
+    "purpose": "Product",
     "year": "2025",
     "bgColor": "#1a1a2e"
   },
   {
     "name": "Dockly",
     "type": "Progressive Web App",
-    "description": "Dockly is a Progressive Web App (PWA) designed to help users locate or contribute safe and nearby bike lock stations. By integrating mapping tools and real-time location data, it provides a user-friendly interface for finding or adding secure bike storage options. This application aims to enhance convenience and promote safe biking practices, delivering a practical solution for urban cyclists.",
+    "description": "A personal product and progressive web app for discovering and contributing safe bike lock stations. Built with performance, accessibility, and offline-first usage in mind.",
     "features": [
       "Next.js",
       "TypeScript",
-      "Google Cloud Platform",
-      "OAuth",
-      "Google Maps",
-      "Google Places API",
       "Firebase",
+      "Google Maps & Places",
       "Tailwind CSS",
-      "Design"
+      "PWA"
     ],
+    "role": "End-to-end ownership",
+    "focus": "PWA capabilities, maps UX, API composition",
     "image": "/projects/dockly.png",
     "link": "https://dockly.bike",
     "source": "",
-    "purpose": "Venture",
+    "purpose": "Product",
     "year": "2024",
     "bgColor": "#6366f1"
   },
   {
     "name": "WeatherTracks",
     "type": "Web Application",
-    "description": "WeatherTracks is an web app that curates Spotify playlists tailored to the current weather in a user's location. By integrating the OpenWeatherMap API for real-time weather data, the Spotify API for playlist generation, and The Noun Project for high-quality icons, WeatherTracks provides a personalized music experience based on local weather conditions.",
+    "description": "A web application that curates Spotify playlists based on local weather conditions. Built as a focused experiment in API integration, responsive UI, and frontend polish.",
     "features": [
-      "Gatsby.js",
+      "React",
       "Spotify API",
       "OpenWeatherMap API",
-      "Noun Project API",
-      "CSS",
-      "Tailwind CSS",
-      "Design"
+      "Tailwind CSS"
     ],
+    "role": "Full-stack prototype to MVP",
+    "focus": "API orchestration, user delight, rapid iteration",
     "image": "/projects/weathertracks.jpg",
     "link": "https://weathertracks.netlify.app",
     "source": "https://github.com/kalevitan/weathertracks",
-    "purpose": "MVP",
+    "purpose": "Prototype",
     "year": "2021",
     "bgColor": "#1db954"
-  },
-  {
-    "name": "Henco Reprographics",
-    "type": "Website",
-    "description": "Henco Reprographics is a WordPress website built for a printing business, allowing users to request custom quotes by uploading documents for evaluation. I developed custom JavaScript for dynamic form validations, interactivity, and document previews, while implementing server-side scripts for secure document processing. Additionally, I created a custom theme to ensure the site flowed smoothly and aligned with the business's brand.",
-    "features": ["WordPress", "JavaScript", "CSS", "Design", "Branding"],
-    "image": "/projects/hencoreprographics.jpg",
-    "link": "http://hencorepro.com/",
-    "purpose": "Freelance",
-    "year": "2017",
-    "bgColor": "#1e3a5f"
-  },
-  {
-    "name": "Trinity United Methodist Church",
-    "type": "Website",
-    "description": "Trinity United Methodist Church's Drupal 7 website served as a central hub for sharing information about services, events, and community outreach. I collaborated with Trinity United Methodist Church as a client to design and develop a comprehensive branding package, which included a logo, stationery, photography, and a website that aligned with their values and mission.",
-    "features": ["Drupal", "JavaScript", "CSS", "Design", "Branding"],
-    "image": "/projects/trinitywavl.jpg",
-    "purpose": "Freelance",
-    "year": "2018",
-    "bgColor": "#f5f5f5"
-  },
-  {
-    "name": "Program Services",
-    "type": "Web Application",
-    "description": "As a collaborator on Program Services, a Ruby on Rails application offering continuing education courses for mental health professionals, I worked closely with the client to implement a cost-effective approach. I contributed to the website's frontend development, focusing on delivering an intuitive user experience while aligning with the client's budget-conscious goals.",
-    "features": ["Ruby on Rails", "JavaScript", "CSS", "Design"],
-    "image": "/projects/program-services.jpg",
-    "purpose": "Freelance",
-    "year": "2018",
-    "bgColor": "#2c5282"
-  },
-  {
-    "name": "Sign The Climate Agreement",
-    "type": "Web Application",
-    "description": "Sign The Climate Agreement was a Drupal 7 web application built for a client passionate about climate action. It enabled users to pledge support for the Paris Climate Agreement, upload photos, and share their commitment across social media using #ClimateSign. The platform provided an easy, cost-effective way for advocates to amplify their message and inspire global impact.",
-    "features": ["Drupal", "JavaScript", "Social APIs", "CSS", "Design"],
-    "image": "/projects/signtheagreement.jpg",
-    "purpose": "Freelance",
-    "year": "2016",
-    "bgColor": "#2d6a4f"
   }
 ]

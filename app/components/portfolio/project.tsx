@@ -11,8 +11,8 @@ interface ProjectProps {
   features?: Array<string>;
   link?: string;
   source?: string;
-  purpose?: string;
-  year?: string;
+  role?: string;
+  focus?: string;
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -23,8 +23,8 @@ const Project: React.FC<ProjectProps> = ({
   features,
   link,
   source,
-  purpose,
-  year,
+  role,
+  focus,
 }) => {
   return (
     <article className="portfolio__slide relative p-8 sm:p-12 rounded grid auto-flow-col gap-0 sm:gap-14 md:grid-cols-[1fr,45%] xlg:grid-cols-[1fr,35%] items-center max-w-[1472px]">
@@ -45,18 +45,24 @@ const Project: React.FC<ProjectProps> = ({
             <p className="lead !pb-0">{description}</p>
           </div>
         )}
-        <footer className="portfolio__footer flex sm:flex-col gap-3 mt-6">
-          <dl className="flex gap-3 flex-wrap">
-            <div className="flex">
-              <dt className="text-[var(--gray)] text-sm mr-2">Purpose:</dt>
-              <dd className="text-[var(--gray)] text-sm">{purpose}</dd>
-            </div>
-            <div className="flex">
-              <dt className="text-[var(--gray)] text-sm mr-2">Year:</dt>
-              <dd className="text-[var(--gray)] text-sm">{year}</dd>
-            </div>
-          </dl>
-        </footer>
+        {(role || focus) && (
+          <div className="portfolio__footer mt-6">
+            <dl className="text-sm text-[var(--gray)] space-y-2">
+              {role && (
+                <div className="grid grid-cols-[auto,1fr] gap-2">
+                  <dt className="font-medium">Role:</dt>
+                  <dd className="m-0">{role}</dd>
+                </div>
+              )}
+              {focus && (
+                <div className="grid grid-cols-[auto,1fr] gap-2">
+                  <dt className="font-medium">Focus:</dt>
+                  <dd className="m-0">{focus}</dd>
+                </div>
+              )}
+            </dl>
+          </div>
+        )}
       </div>
       <div className="portfolio__image-wrapper pt-8 sm:pt-0">
         <figure className="portfolio__image relative h-[250px] sm:h-[345px] flex items-center justify-center">

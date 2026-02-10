@@ -8,7 +8,7 @@ const Certifications: React.FC = () => {
           <h2 id="certifications-heading">Certifications & Training</h2>
           <div className="skills__introduction">
             <p className="lead">
-              I have pursued various certifications and training programs to deepen my expertise in web and application development. These experiences have provided me with a solid foundation in the technologies and best practices that I rely on in my daily work.
+              Certifications and training that reflect both my modern frontend focus and earlier foundational experience.
             </p>
           </div>
         </section>
@@ -19,25 +19,25 @@ const Certifications: React.FC = () => {
             <div className="drupal-developer emblem rounded-full shadow-sm gradient-right p-8 min-w-fit place-content-center aspect-[1]">
               <h3>Drupal Developer</h3>
               <p>
-                Acquia Certified Developer - Drupal 8
+                Foundation in scalable CMS architecture and content systems.
               </p>
             </div>
             <div className="drupal-frontend-specialist emblem rounded-full shadow-sm gradient-left p-8 place-content-center aspect-[1]">
               <h3>Drupal Frontend Specialist</h3>
               <p>
-                Acquia Certified Frontend Specialist - Drupal 8
+                Foundation in accessibility, templating, and structured content systems.
               </p>
             </div>
             <div className="next-js-developer emblem rounded-full shadow-sm gradient-right p-8 place-content-center aspect-[1]">
-              <h3>Next.js 15 & React</h3>
+              <h3>Next.js & React</h3>
               <p>
-                Completed Professional Training: Next.js 15 & React (Udemy)
+                Modern React and Next.js patterns with focus on performance and architecture.
               </p>
             </div>
             <div className="ruby-developer emblem rounded-full shadow-sm gradient-left p-8 place-content-center aspect-[1]">
               <h3>Ruby Cohort Training</h3>
               <p>
-                Completed 8-Week Ruby Cohort Training (Tech Talent South)
+                Strengthened backend fundamentals and scripting fluency.
               </p>
             </div>
           </div>

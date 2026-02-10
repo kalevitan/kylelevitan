@@ -44,7 +44,7 @@ const Menu: React.FC = () => {
         </li>
         <li>
           <a
-            href="https://www.linkedin.com/in/kyle-levitan-1308a441/"
+            href="https://www.linkedin.com/in/kyle-levitan"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit my LinkedIn profile"
