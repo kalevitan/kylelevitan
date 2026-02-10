@@ -32,7 +32,7 @@
       "category": "Quality & Maintainability",
       "items": [
         "I favor pragmatic engineering decisions that lead to long-term confidence: simple abstractions, targeted testing, and sustainable patterns.",
-        "Testing tools like Playwright and Cypress are used where they add confidence."
+        "I write unit and integration tests as needed, and reach for tools like Playwright and Cypress for end-to-end confidence."
       ]
     }
   ]
