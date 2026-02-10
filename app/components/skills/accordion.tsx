@@ -9,20 +9,14 @@ interface Skill {
 interface AccordionItemProps {
   type: string;
   list: string[];
-  // expandedCategory: string;
-  // setExpandedCategory: (category: string) => void;
 }
 
 interface AccordionProps {
   items: Skill[];
-  // expandedCategory: string;
-  // setExpandedCategory: (category: string) => void;
 }
 
 const AccordionItem: React.FC<AccordionItemProps> = ({ type, list }) => {
   const [isExpanded, setIsExpanded] = useState(false)
-
-  // const isExpanded = expandedCategory === type;
 
   const handleSkillsClick = () => {
     setIsExpanded(!isExpanded);
@@ -58,8 +52,6 @@ export const Accordion: React.FC<AccordionProps> = ({ items }) => {
           key={index}
           type={item.type}
           list={item.list}
-          // expandedCategory={expandedCategory}
-          // setExpandedCategory={setExpandedCategory}
         />
       ))}
     </ul>

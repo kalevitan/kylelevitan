@@ -21,12 +21,6 @@ interface IconProps extends LucideProps {
 
 const Skills: React.FC = () => {
   const skills: SkillsData = skillsData;
-  // const [expandedCategory, setExpandedCategory] = useState('');
-
-  // const handleCategoryClick = (category: string) => {
-  //   setExpandedCategory(category === expandedCategory ? "" : category);
-  //   console.log(expandedCategory);
-  // }
 
   const iconMapping = {
     Layout,
