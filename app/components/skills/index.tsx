@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import skillsData from "./skills.json";
 import { LucideProps, Layout, Server, Code2, Sparkles } from "lucide-react";
 

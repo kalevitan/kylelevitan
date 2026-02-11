@@ -1,5 +1,4 @@
-// components/Section.tsx
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 interface SectionProps {
   title?: string;

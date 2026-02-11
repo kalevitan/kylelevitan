@@ -1,6 +1,3 @@
-// components/Menu.tsx
-import React from "react";
-
 const obfuscateEmail = (username: string, domain: string) => {
   return `${username}@${domain}`;
 };

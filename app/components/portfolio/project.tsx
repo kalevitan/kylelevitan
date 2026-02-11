@@ -1,5 +1,3 @@
-// components/Portfolio/Project.tsx
-import React from "react";
 import Image from "next/image";
 import { ExternalLink, Code2 } from "lucide-react";
 import Link from "next/link";
