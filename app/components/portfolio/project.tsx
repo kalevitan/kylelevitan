@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { ExternalLink, Code2 } from "lucide-react";
+import Link from "next/link";
 
 interface ProjectProps {
   name: string;
@@ -27,7 +28,7 @@ const Project: React.FC<ProjectProps> = ({
   focus,
 }) => {
   return (
-    <article className="portfolio__slide relative p-8 sm:p-12 rounded grid auto-flow-col gap-0 sm:gap-14 md:grid-cols-[1fr,45%] xlg:grid-cols-[1fr,35%] items-center max-w-[1472px]">
+    <article className="portfolio__slide relative p-8 sm:p-12 rounded grid auto-flow-col gap-0 sm:gap-[5.5rem] lg:grid-cols-[1fr,max(35%,556px)] items-center max-w-[1472px]">
       <div className="portfolio__details--wrapper flex flex-col">
         <header className="portfolio__header flex flex-col">
           <span className="text-[var(--gray)] text-sm" role="doc-subtitle">
@@ -68,14 +69,16 @@ const Project: React.FC<ProjectProps> = ({
         <figure className="portfolio__image relative h-[250px] sm:h-[345px] flex items-center justify-center">
           <div className="relative h-full w-full flex items-center justify-center">
             <div className="overflow-hidden rounded drop-shadow-lg">
-              <Image
-                src={image}
-                alt={`Screenshot of ${name} project`}
-                width={1240}
-                height={690}
-                priority
-                className="max-h-[250px] sm:max-h-[345px] w-auto h-auto object-contain"
-              />
+              <Link href={image} target="_blank" aria-label={`View ${name} project`} className={"hover:filter-none hover:scale-105 transition-transform duration-200 ease-in-out"}>
+                <Image
+                  src={image}
+                  alt={`Screenshot of ${name} project`}
+                  width={1240}
+                  height={690}
+                  priority
+                  className="max-h-[250px] sm:max-h-[345px] w-auto h-auto object-contain"
+                />
+              </Link>
             </div>
           </div>
         </figure>
