@@ -1,4 +1,3 @@
-// components/Index.tsx
 "use client";
 import React from "react";
 import skillsData from "./skills.json";
@@ -19,7 +18,7 @@ interface IconProps extends LucideProps {
   iconName: string;
 }
 
-const Skills: React.FC = () => {
+const Skills = () => {
   const skills: SkillsData = skillsData;
 
   const iconMapping = {
@@ -29,7 +28,7 @@ const Skills: React.FC = () => {
     Sparkles,
   };
 
-  const DynamicIcon: React.FC<IconProps> = ({ iconName, ...props }) => {
+  const DynamicIcon = ({ iconName, ...props }: IconProps) => {
     const LucideIcon = iconMapping[iconName as keyof typeof iconMapping];
     return <LucideIcon {...props} />;
   };

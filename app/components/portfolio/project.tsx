@@ -16,7 +16,7 @@ interface ProjectProps {
   focus?: string;
 }
 
-const Project: React.FC<ProjectProps> = ({
+const Project = ({
   name,
   type,
   image,
@@ -26,7 +26,7 @@ const Project: React.FC<ProjectProps> = ({
   source,
   role,
   focus,
-}) => {
+}: ProjectProps) => {
   return (
     <article className="portfolio__slide relative p-8 sm:p-12 rounded grid auto-flow-col gap-0 sm:gap-[5.5rem] lg:grid-cols-[1fr,max(35%,556px)] items-center max-w-[1472px]">
       <div className="portfolio__details--wrapper flex flex-col">

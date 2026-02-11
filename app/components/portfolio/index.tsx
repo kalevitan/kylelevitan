@@ -1,4 +1,3 @@
-// components/Portfolio/Index.tsx
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
@@ -8,7 +7,7 @@ const Project = dynamic(() => import("./project"), {
   loading: () => <p>Loading...</p>,
 });
 
-const Portfolio: React.FC = () => {
+const Portfolio = () => {
   return (
     <>
       <div className="layout">

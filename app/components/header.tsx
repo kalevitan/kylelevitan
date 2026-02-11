@@ -4,7 +4,7 @@
 import React from "react";
 import { motion } from "motion/react";
 
-export const Header: React.FC = () => {
+export const Header = () => {
   return (
     <>
       <div className="layout">

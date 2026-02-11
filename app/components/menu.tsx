@@ -5,7 +5,7 @@ const obfuscateEmail = (username: string, domain: string) => {
   return `${username}@${domain}`;
 };
 
-const Menu: React.FC = () => {
+const Menu = () => {
   const email = obfuscateEmail('kylelevitan', 'gmail.com');
 
   return (

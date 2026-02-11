@@ -15,7 +15,7 @@ interface AccordionProps {
   items: Skill[];
 }
 
-const AccordionItem: React.FC<AccordionItemProps> = ({ type, list }) => {
+const AccordionItem = ({ type, list }: AccordionItemProps) => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   const handleSkillsClick = () => {
@@ -44,7 +44,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ type, list }) => {
   )
 }
 
-export const Accordion: React.FC<AccordionProps> = ({ items }) => {
+export const Accordion = ({ items }: AccordionProps) => {
   return (
     <ul className="w-full space-y-4">
       {items.map((item, index) => (

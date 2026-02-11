@@ -1,6 +1,4 @@
-import React from "react";
-
-const Certifications: React.FC = () => {
+function Certifications() {
   return (
     <>
       <div className="layout">

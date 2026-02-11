@@ -7,7 +7,7 @@ interface SectionProps {
   classes?: string;
 }
 
-const Section: React.FC<SectionProps> = ({ title, children, classes }) => {
+const Section = ({ title, children, classes }: SectionProps) => {
   return (
     <div id={title} className={`section section--panel section--panel--${title} py-6 md:py-24 ${classes}`}>
       <div className="grid grid-cols-core">
