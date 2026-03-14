@@ -1,7 +1,6 @@
 import Header from "./components/header";
 import Section from "./components/section"
 import Skills from "./components/skills";
-import Certifications from "./components/certifications";
 import Menu from "./components/menu";
 import ThemeToggle from "./components/themetoggle";
 import { generatePortfolioStructuredData, generateBreadcrumbStructuredData } from './lib/seo';
@@ -20,7 +19,6 @@ export default function Home() {
     { name: 'Home', url: '/' },
     { name: 'Portfolio', url: '/#portfolio' },
     { name: 'Skills', url: '/#skills' },
-    { name: 'Certifications', url: '/#certifications' },
   ]);
 
   return (
@@ -62,9 +60,6 @@ export default function Home() {
           <Skills/>
         </Section>
 
-        <Section title="certifications" classes="bg-[var(--background-gray)]">
-          <Certifications/>
-        </Section>
       </main>
 
       <footer className="grid grid-cols-core py-6" role="contentinfo">

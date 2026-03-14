@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ExternalLink, Code2 } from "lucide-react";
+import { ExternalLink, Code2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 interface ProjectProps {
@@ -12,6 +12,7 @@ interface ProjectProps {
   source?: string;
   role?: string;
   focus?: string;
+  slug?: string;
 }
 
 const Project = ({
@@ -24,7 +25,10 @@ const Project = ({
   source,
   role,
   focus,
+  slug,
 }: ProjectProps) => {
+  const caseStudyHref = slug ? `/projects/${slug}` : undefined;
+
   return (
     <article className="portfolio__slide relative p-8 sm:p-12 rounded grid auto-flow-col gap-0 sm:gap-[5.5rem] lg:grid-cols-[1fr,max(35%,556px)] items-center max-w-[1472px]">
       <div className="portfolio__details--wrapper flex flex-col">
@@ -43,6 +47,15 @@ const Project = ({
           <div className="portfolio__description my-4">
             <p className="lead !pb-0">{description}</p>
           </div>
+        )}
+        {caseStudyHref && (
+          <Link
+            href={caseStudyHref}
+            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand)] no-underline hover:brightness-110 transition-all mt-2"
+          >
+            Read Case Study
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         )}
         {(role || focus) && (
           <div className="portfolio__footer mt-6">
@@ -67,16 +80,39 @@ const Project = ({
         <figure className="portfolio__image relative h-[250px] sm:h-[345px] flex items-center justify-center">
           <div className="relative h-full w-full flex items-center justify-center">
             <div className="overflow-hidden rounded drop-shadow-lg">
-              <Link href={image} target="_blank" aria-label={`View ${name} project`} className={"hover:filter-none hover:scale-105 transition-transform duration-200 ease-in-out"}>
-                <Image
-                  src={image}
-                  alt={`Screenshot of ${name} project`}
-                  width={1240}
-                  height={690}
-                  priority
-                  className="max-h-[250px] sm:max-h-[345px] w-auto h-auto object-contain"
-                />
-              </Link>
+              {caseStudyHref ? (
+                <Link
+                  href={caseStudyHref}
+                  aria-label={`Read the ${name} case study`}
+                  className="hover:filter-none hover:scale-105 transition-transform duration-200 ease-in-out"
+                >
+                  <Image
+                    src={image}
+                    alt={`Screenshot of ${name} project`}
+                    width={1240}
+                    height={690}
+                    priority
+                    className="max-h-[250px] sm:max-h-[345px] w-auto h-auto object-contain"
+                  />
+                </Link>
+              ) : (
+                <a
+                  href={link || image}
+                  target={link ? "_blank" : undefined}
+                  rel={link ? "noopener noreferrer" : undefined}
+                  aria-label={`View ${name} project`}
+                  className="hover:filter-none hover:scale-105 transition-transform duration-200 ease-in-out"
+                >
+                  <Image
+                    src={image}
+                    alt={`Screenshot of ${name} project`}
+                    width={1240}
+                    height={690}
+                    priority
+                    className="max-h-[250px] sm:max-h-[345px] w-auto h-auto object-contain"
+                  />
+                </a>
+              )}
             </div>
           </div>
         </figure>

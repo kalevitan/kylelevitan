@@ -39,6 +39,7 @@ const Portfolio = () => {
                   source={project.source}
                   role={project.role}
                   focus={project.focus}
+                  slug={"slug" in project ? (project as { slug: string }).slug : undefined}
                 />
               </li>
             ))}

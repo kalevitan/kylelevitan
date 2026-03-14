@@ -1,17 +1,20 @@
 [
   {
     "name": "Campfire RSVP",
+    "slug": "campfire-rsvp",
     "type": "iOS and Android Mobile App",
-    "description": "A social planning app for coordinating events with friends. Designed and built end-to-end as a cross-platform experience, including UI, backend integration, and real-time coordination flows.",
+    "description": "A cross-platform planning app built to make invites, RSVPs, and group coordination more reliable than a text thread.",
     "features": [
       "React Native",
       "Expo",
       "TypeScript",
       "Supabase",
+      "Maestro",
+      "Testing",
       "Push notifications"
     ],
-    "role": "Personal product, full ownership",
-    "focus": "Cross-platform UX, performance, real-time interactions",
+    "role": "Solo build across product, app, backend, and release",
+    "focus": "Auth reliability, testing strategy, cross-platform UX",
     "image": "/projects/campfirersvp-preview.png",
     "link": "https://www.campfire.rsvp",
     "source": "",
@@ -21,8 +24,9 @@
   },
   {
     "name": "Dockly",
+    "slug": "dockly",
     "type": "Progressive Web App",
-    "description": "A personal product and progressive web app for discovering and contributing safe bike lock stations. Built with performance, accessibility, and offline-first usage in mind.",
+    "description": "An installable map app for discovering and contributing trustworthy bike parking data with offline-friendly mobile performance.",
     "features": [
       "Next.js",
       "TypeScript",
@@ -31,32 +35,13 @@
       "Tailwind CSS",
       "PWA"
     ],
-    "role": "End-to-end ownership",
-    "focus": "PWA capabilities, maps UX, API composition",
+    "role": "Solo build from product concept to shipped PWA",
+    "focus": "Maps UX, performance, and contribution flows",
     "image": "/projects/dockly.png",
     "link": "https://dockly.bike",
     "source": "",
     "purpose": "Product",
     "year": "2024",
     "bgColor": "#6366f1"
-  },
-  {
-    "name": "WeatherTracks",
-    "type": "Web Application",
-    "description": "A web application that curates Spotify playlists based on local weather conditions. Built as a focused experiment in API integration, responsive UI, and frontend polish.",
-    "features": [
-      "React",
-      "Spotify API",
-      "OpenWeatherMap API",
-      "Tailwind CSS"
-    ],
-    "role": "Full-stack prototype to MVP",
-    "focus": "API orchestration, user delight, rapid iteration",
-    "image": "/projects/weathertracks.png",
-    "link": "https://weathertracks.netlify.app",
-    "source": "https://github.com/kalevitan/weathertracks",
-    "purpose": "Prototype",
-    "year": "2021",
-    "bgColor": "#1db954"
   }
 ]
