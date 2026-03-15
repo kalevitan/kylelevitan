@@ -25,6 +25,9 @@ export const Header = () => {
                 <p className="lead">
                   I&apos;m a frontend-first engineer building modern web and mobile products with React, React Native, Next.js, and TypeScript. I focus on clean interfaces, performance, accessibility, and scalable architecture that supports real product outcomes.
                 </p>
+                <p className="lead">
+                  Currently building <a href="https://levitandigital.com" target="_blank" rel="noopener noreferrer" style={{display: 'inline', textDecoration: 'none'}}>Levitan Digital</a>.
+                </p>
               </div>
 
               <motion.div

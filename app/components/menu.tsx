@@ -7,7 +7,7 @@ const Menu = () => {
 
   return (
     <nav aria-label="Social links" className="menu">
-      <ul className="grid grid-cols-4 gap-4 max-w-64 items-center list-none p-0 m-0">
+      <ul className="grid grid-cols-3 gap-4 max-w-48 items-center list-none p-0 m-0">
         <li>
           <a
             href={`mailto:${email}`}
@@ -15,17 +15,6 @@ const Menu = () => {
           >
             <i className="lni lni-envelope-1" aria-hidden="true"></i>
             <span className="sr-only">Email</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.drupal.org/u/k_a_l"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit my Drupal.org profile"
-          >
-            <i className="lni lni-drupal" aria-hidden="true"></i>
-            <span className="sr-only">Drupal.org</span>
           </a>
         </li>
         <li>
