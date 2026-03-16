@@ -1,17 +1,18 @@
-import Header from "./components/header";
-import Section from "./components/section"
-import Skills from "./components/skills";
-import Menu from "./components/menu";
-import ThemeToggle from "./components/themetoggle";
-import { generatePortfolioStructuredData, generateBreadcrumbStructuredData } from './lib/seo';
+import Header from "@/app/components/header";
+import Section from "@/app/components/section"
+import Skills from "@/app/components/skills";
+import Menu from "@/app/components/menu";
+import ThemeToggle from "@/app/components/themetoggle";
+import { generatePortfolioStructuredData, generateBreadcrumbStructuredData } from '@/app/lib/seo';
 import dynamic from 'next/dynamic';
 
-const Portfolio = dynamic(() => import('./components/portfolio'), {
+const Portfolio = dynamic(() => import('@/app/components/portfolio'), {
   loading: () => <p className="text-center p-4">Loading portfolio items...</p>,
 });
 
 // Import projects data for structured data
-import projects from './components/portfolio/projects.json';
+import projects from '@/app/components/portfolio/projects.json';
+import Footer from "@/app/components/footer";
 
 export default function Home() {
   const portfolioStructuredData = generatePortfolioStructuredData(projects);
@@ -62,14 +63,7 @@ export default function Home() {
 
       </main>
 
-      <footer className="grid grid-cols-core py-6" role="contentinfo">
-        <div className="layout flex items-center justify-between">
-          <div className="text-md font-serif text-[var(--brand)]" aria-label="Copyright">
-            © {new Date().getFullYear()}, Kyle Levitan · <a href="https://levitandigital.com" target="_blank" rel="noopener noreferrer" style={{display: 'inline', textDecoration: 'none'}}>Levitan Digital LLC</a>
-          </div>
-          <Menu/>
-        </div>
-      </footer>
+      <Footer/>
     </>
   );
 }

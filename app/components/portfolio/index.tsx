@@ -1,8 +1,8 @@
 "use client";
 import dynamic from "next/dynamic";
-import projects from "./projects.json";
+import projects from "@/app/components/portfolio/projects.json";
 
-const Project = dynamic(() => import("./project"), {
+const Project = dynamic(() => import("@/app/components/portfolio/project"), {
   loading: () => <p>Loading...</p>,
 });
 

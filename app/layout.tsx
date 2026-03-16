@@ -3,9 +3,9 @@ import type { Viewport } from 'next'
 import { Source_Sans_3, Roboto_Slab } from 'next/font/google';
 import { LazyMotion, domAnimation } from "motion/react"
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { SEO_CONFIG, generateStructuredData, generateWebsiteStructuredData } from './lib/seo';
+import { SEO_CONFIG, generateStructuredData, generateWebsiteStructuredData } from '@/app/lib/seo';
 import 'lineicons/dist/lineicons.css';
-import "./globals.css";
+import "@/app/globals.css";
 
 const sourceSans3 = Source_Sans_3({
   subsets: ['latin'],

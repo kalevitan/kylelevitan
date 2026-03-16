@@ -2,11 +2,12 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { caseStudies, getCaseStudy } from "../../components/portfolio/case-studies";
-import { SEO_CONFIG } from "../../lib/seo";
+import { caseStudies, getCaseStudy } from "@/app/components/portfolio/case-studies";
+import { SEO_CONFIG } from "@/app/lib/seo";
 import { notFound } from "next/navigation";
-import Menu from "../../components/menu";
-import ThemeToggle from "../../components/themetoggle";
+import Menu from "@/app/components/menu";
+import ThemeToggle from "@/app/components/themetoggle";
+import Footer from "@/app/components/footer";
 
 export function generateStaticParams() {
   return caseStudies.map((cs) => ({ slug: cs.slug }));
@@ -74,7 +75,7 @@ export default async function CaseStudyPage({
 
         {/* Hero */}
         <div className="mb-12">
-          <span className="text-xs font-medium tracking-widest uppercase text-[var(--gray)]">
+          <span className="text-xs font-medium tracking-widest text-[var(--gray)]">
             {cs.type} &middot; {cs.year}
           </span>
           <h1 className="!text-3xl md:!text-5xl !mt-1 !mb-4">{cs.name}</h1>
@@ -203,14 +204,7 @@ export default async function CaseStudyPage({
         </div>
       </main>
 
-      <footer className="grid grid-cols-core py-6" role="contentinfo">
-        <div className="layout flex items-center justify-between">
-          <div className="text-md font-serif text-[var(--brand)]" aria-label="Copyright">
-            &copy; {new Date().getFullYear()}, Kyle Levitan
-          </div>
-          <Menu />
-        </div>
-      </footer>
+      <Footer/>
     </>
   );
 }
