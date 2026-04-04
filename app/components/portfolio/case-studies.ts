@@ -25,8 +25,9 @@ export const caseStudies: CaseStudy[] = [
     slug: "campfire-rsvp",
     name: "Campfire RSVP",
     type: "iOS and Android Mobile App",
-    year: "2025",
-    tagline: "Cross-platform group planning built to turn chat into commitment.",
+    year: "2026",
+    tagline:
+      "Cross-platform group planning built to turn chat into commitment.",
     overview:
       "Campfire RSVP started from a recurring failure mode in group chats: plenty of interest, very little commitment. I built the app to test whether a dedicated mobile flow could hold the full planning loop in one place - invite, RSVP, discussion, and last-minute updates. As a solo build, it let me own the product and technical surface end to end, from auth and data modeling to store release and OTA updates.",
     problem:
@@ -91,8 +92,9 @@ export const caseStudies: CaseStudy[] = [
     slug: "dockly",
     name: "Dockly",
     type: "Progressive Web App",
-    year: "2024",
-    tagline: "An installable map for bike parking that riders can actually trust.",
+    year: "2025",
+    tagline:
+      "An installable map for bike parking that riders can actually trust.",
     overview:
       "Dockly came from a gap I kept noticing in existing maps: they could tell you where you were, but not whether a bike spot would actually work when you arrived. I built it as a PWA to see how far a modern web stack could go for geospatial discovery, offline access, and field-friendly contribution flows.",
     problem:
