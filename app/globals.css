@@ -246,10 +246,24 @@ footer:not(article footer) {
   letter-spacing: 0.0365rem;
 }
 
+.gradient-left,
+.gradient-right {
+  --angle: 135deg;
+  transition: --angle 0.4s ease;
+}
+
+/* Sweep the gradient around to trade corners, echoing the way alternating
+   portfolio slides mirror each other. --angle is registered below, which is
+   what makes it animatable - a plain linear-gradient can't transition. */
+.gradient-left:hover,
+.gradient-right:hover {
+  --angle: 315deg;
+}
+
 .gradient-left {
   background: var(--background-gray)
     linear-gradient(
-      135deg,
+      var(--angle, 135deg),
       hsl(178.59deg 34.98% 47.65% / 8%) 0%,
       hsl(358.59deg 34.98% 57.65% / 8%) 100%
     );
@@ -258,7 +272,7 @@ footer:not(article footer) {
 .gradient-right {
   background: var(--background-gray)
     linear-gradient(
-      135deg,
+      var(--angle, 135deg),
       hsl(358.59deg 34.98% 57.65% / 8%) 0%,
       hsl(178.59deg 34.98% 47.65% / 8%) 100%
     );
