@@ -19,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${SEO_CONFIG.siteUrl}/#writing`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${SEO_CONFIG.siteUrl}/#skills`,
       lastModified: new Date(),
       changeFrequency: "monthly",

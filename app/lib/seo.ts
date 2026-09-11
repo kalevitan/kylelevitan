@@ -10,6 +10,7 @@ export const SEO_CONFIG = {
   linkedinProfile: 'https://www.linkedin.com/in/kyle-levitan-1308a441/',
   githubProfile: 'https://github.com/kalevitan',
   drupalProfile: 'https://www.drupal.org/u/k_a_l',
+  mediumProfile: 'https://medium.com/@kylelevitan',
   email: 'kylelevitan@gmail.com',
   location: 'Asheville, NC',
   jobTitle: 'Senior Frontend and Full-Stack Engineer',
@@ -53,6 +54,7 @@ export const generateStructuredData = () => {
       SEO_CONFIG.linkedinProfile,
       SEO_CONFIG.githubProfile,
       SEO_CONFIG.drupalProfile,
+      SEO_CONFIG.mediumProfile,
     ],
     alumniOf: {
       '@type': 'Organization',
@@ -130,6 +132,32 @@ export const generateBreadcrumbStructuredData = (items: Array<{name: string, url
       position: index + 1,
       name: item.name,
       item: item.url ? `${SEO_CONFIG.siteUrl}${item.url}` : undefined,
+    })),
+  };
+};
+
+export const generateBlogStructuredData = (posts: Array<{title: string, link: string, pubDate: string, excerpt: string}>) => {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: `Writing by ${SEO_CONFIG.author}`,
+    url: SEO_CONFIG.mediumProfile,
+    author: {
+      '@type': 'Person',
+      name: SEO_CONFIG.author,
+      url: SEO_CONFIG.siteUrl,
+    },
+    blogPost: posts.map((post) => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      url: post.link,
+      datePublished: new Date(post.pubDate).toISOString(),
+      description: post.excerpt,
+      author: {
+        '@type': 'Person',
+        name: SEO_CONFIG.author,
+        url: SEO_CONFIG.siteUrl,
+      },
     })),
   };
 };

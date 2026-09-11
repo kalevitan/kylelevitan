@@ -303,3 +303,11 @@ footer:not(article footer) {
   initial-value: 135deg;
   inherits: false;
 }
+
+/* Writing / Medium */
+
+/* Post titles come from the Medium feed verbatim, so they opt out of the
+   global capitalize the way h1 em does - otherwise "and"/"a" get uppercased. */
+.writing__title {
+  text-transform: none;
+}

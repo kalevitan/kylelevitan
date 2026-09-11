@@ -7,7 +7,7 @@ const Menu = () => {
 
   return (
     <nav aria-label="Social links" className="menu">
-      <ul className="grid grid-cols-3 gap-4 max-w-48 items-center list-none p-0 m-0">
+      <ul className="grid grid-cols-4 gap-4 max-w-64 items-center list-none p-0 m-0">
         <li>
           <a
             href={`mailto:${email}`}
@@ -26,6 +26,17 @@ const Menu = () => {
           >
             <i className="lni lni-github" aria-hidden="true"></i>
             <span className="sr-only">GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://medium.com/@kylelevitan"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read my writing on Medium"
+          >
+            <i className="lni lni-medium-alt" aria-hidden="true"></i>
+            <span className="sr-only">Medium</span>
           </a>
         </li>
         <li>
