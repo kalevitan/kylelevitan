@@ -55,7 +55,6 @@ export const Header = () => {
                         behavior: 'smooth'
                       });
                     }}
-                    onFocus={(e) => e.target.blur()}
                   >
                     <span className="header__cta__text">View my work</span>
                     <svg

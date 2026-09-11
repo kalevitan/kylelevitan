@@ -157,8 +157,11 @@ a {
   cursor: pointer;
 }
 
-a,
-a:focus {
+/* Deliberately not "a, a:focus" - :focus bumps specificity to (0,1,1), which
+   beats utility classes like .inline-flex (0,1,0) and flips links to display:
+   block the moment they're clicked, wrapping their icon to the next line.
+   Plain anchors are unaffected: the bare `a` rule already matches focused ones. */
+a {
   color: var(--brand);
   border: none;
   display: block;
