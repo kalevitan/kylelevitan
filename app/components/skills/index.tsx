@@ -50,7 +50,7 @@ They represent how I think about building modern software, from interface design
           <div className="skills__content grid gap-6 grid-cols-1 md:grid-cols-12 max-w-[1472px] m-auto">
             {skills.skills.map((credential) => (
               <div
-                className={`skills__list flex flex-col p-12 shadow-sm border-spacing-2 rounded items-start gap-6 ${
+                className={`skills__list flex flex-col p-8 sm:p-12 shadow-sm border-spacing-2 rounded items-start gap-6 ${
                   credential.grid == "large"
                     ? "col-span-full md:col-span-7 gradient-left"
                     : "col-span-full md:col-span-5 gradient-right"

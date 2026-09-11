@@ -131,7 +131,7 @@ export default async function CaseStudyPage({
               return (
                 <div
                   key={h.title}
-                  className={`p-12 rounded shadow-sm ${
+                  className={`p-8 sm:p-12 rounded shadow-sm ${
                     isLarge
                       ? "col-span-full md:col-span-7 gradient-left"
                       : "col-span-full md:col-span-5 gradient-right"
