@@ -2,7 +2,7 @@
 export const SEO_CONFIG = {
   siteName: 'Kyle Levitan',
   siteUrl: 'https://kylelevitan.com',
-  defaultTitle: 'Kyle Levitan | Senior Frontend & Full-Stack Engineer',
+  defaultTitle: 'Kyle Levitan | Full-Stack Engineer',
   defaultDescription: 'Kyle Levitan is a frontend-first engineer building modern web and mobile products with React, Next.js, and TypeScript. Focused on clean interfaces, performance, accessibility, and scalable architecture that supports real product outcomes.',
   defaultKeywords: 'Kyle Levitan, senior frontend engineer, full-stack engineer, React, Next.js, TypeScript, React Native, PWAs, accessibility, web performance, product engineering',
   author: 'Kyle Levitan',
@@ -13,7 +13,7 @@ export const SEO_CONFIG = {
   mediumProfile: 'https://medium.com/@kylelevitan',
   email: 'kylelevitan@gmail.com',
   location: 'Asheville, NC',
-  jobTitle: 'Senior Frontend and Full-Stack Engineer',
+  jobTitle: 'Full-Stack Engineer',
   image: '/images/Kyle-Levitan_BW.png', // We'll need to create this
   favicon: '/favicon.ico',
 };
