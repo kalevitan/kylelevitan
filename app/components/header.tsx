@@ -1,7 +1,34 @@
 // components/Header.tsx
 'use client';
 
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
+
+// The hero lines rise into place one after another - the same settle the cards
+// below use on scroll, so the page opens the way it scrolls. MotionConfig
+// (layout.tsx) drops the movement and keeps the fades for reduced motion.
+const sequence: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
+};
+
+const rise: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+// Arrives last, then a single bounce to point the way down. null = start from
+// the current value, so the bounce continues from the rise without a snap.
+const ctaRise: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  show: {
+    opacity: 1,
+    y: [null, 0, -6, 0],
+    transition: {
+      y: { duration: 1.1, ease: "easeInOut", times: [0, 0.4, 0.7, 1] },
+      opacity: { duration: 0.5, ease: "easeOut" },
+    },
+  },
+};
 
 export const Header = () => {
   return (
@@ -10,72 +37,66 @@ export const Header = () => {
         <section aria-labelledby="intro-heading">
           <motion.div
             className="md:min-h-[70dvh] place-content-center"
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: .5, ease: "easeOut" }}
-            style={{ willChange: "transform, opacity" }}
+            variants={sequence}
+            initial="hidden"
+            animate="show"
           >
             <div className="header__content">
               <h1 id="intro-heading">
-                <span className="header__name">Kyle Levitan</span><br/>
-                Senior Frontend & Full-Stack Engineer
+                <motion.span variants={rise} className="header__name">
+                  Kyle Levitan
+                </motion.span>
+                <motion.span variants={rise} className="block">
+                  Full-Stack Engineer
+                </motion.span>
               </h1>
 
-              <div className="header__introduction">
-                <p className="lead">
+              <motion.div variants={rise} className="header__introduction max-w-[44rem] space-y-4">
+                <p className="lead !pb-0">
                   I&apos;m a frontend-first engineer building modern web and mobile products with React, React Native, Next.js, and TypeScript. I focus on clean interfaces, performance, accessibility, and scalable architecture that supports real product outcomes.
                 </p>
-                <p className="lead">
-                  Currently building <a href="https://levitandigital.com" target="_blank" rel="noopener noreferrer" style={{display: 'inline', textDecoration: 'none'}}>Levitan Digital</a>.
+                <p className="lead !pb-0">
+                  Currently building{" "}
+                  <a
+                    href="https://levitandigital.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline underline decoration-1 underline-offset-4"
+                  >
+                    Levitan Digital
+                  </a>.
                 </p>
-              </div>
+              </motion.div>
 
-              <motion.div
-                  className="header__cta"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: 1,
-                    // null = start from the current value (initial y: 20), so the
-                    // CTA rises from where it faded in instead of snapping to 0.
-                    y: [null, -8, 0],
-                  }}
-                  transition={{
-                    opacity: { duration: 0.6, delay: 0.3, ease: "easeOut" },
-                    y: { duration: 0.6, delay: 0.8, ease: "easeInOut", times: [0, 0.5, 1] }
-                  }}
-                  whileHover={{
-                    y: [0, -8, 0],
-                    transition: { duration: 0.4, ease: "easeInOut" }
+              <motion.div variants={ctaRise} className="header__cta">
+                <a
+                  href="#portfolio"
+                  className="header__cta__link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    document.getElementById('portfolio')?.scrollIntoView({
+                      behavior: reduceMotion ? 'auto' : 'smooth'
+                    });
                   }}
                 >
-                  <a
-                    href="#portfolio"
-                    className="header__cta__link"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                      document.getElementById('portfolio')?.scrollIntoView({
-                        behavior: reduceMotion ? 'auto' : 'smooth'
-                      });
-                    }}
+                  <span className="header__cta__text">View my work</span>
+                  <svg
+                    className="header__cta__icon"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
-                    <span className="header__cta__text">View my work</span>
-                    <svg
-                      className="header__cta__icon"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M12 5v14"/>
-                      <path d="m19 12-7 7-7-7"/>
-                    </svg>
-                  </a>
-                </motion.div>
+                    <path d="M12 5v14"/>
+                    <path d="m19 12-7 7-7-7"/>
+                  </svg>
+                </a>
+              </motion.div>
             </div>
           </motion.div>
         </section>

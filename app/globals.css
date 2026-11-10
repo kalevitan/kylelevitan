@@ -35,15 +35,21 @@ body {
   font-family: var(--font-source-sans-3);
 }
 
-/* Professional Header Layout */
+/* Professional Header Layout
+   One rhythm from a single gap: title → intro sit 2rem apart, and the CTA
+   gets an extra 1rem so it reads as the next step rather than part of the
+   intro. (Name → title spacing comes from .header__name's own margin.)
+   flex-start keeps the CTA at its natural width instead of stretching across
+   the column. */
 .header__content {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 2rem;
 }
 
-.header__introduction {
-  margin-bottom: 1rem;
+.header__content h1 {
+  margin: 0;
 }
 
 .header__cta {
@@ -82,20 +88,6 @@ body {
 
   .header__cta__link:hover .header__cta__icon {
     transform: translateY(1px);
-  }
-}
-
-@media (min-width: 768px) {
-  .header__content {
-    gap: 2.5rem;
-  }
-
-  .header__cta {
-    margin-top: 1.5rem;
-  }
-
-  .header__cta__link {
-    font-size: 0.875rem;
   }
 }
 
