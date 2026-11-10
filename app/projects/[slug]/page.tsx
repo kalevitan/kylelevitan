@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
@@ -131,7 +132,8 @@ export default async function CaseStudyPage({
               return (
                 <div
                   key={h.title}
-                  className={`p-8 sm:p-12 rounded shadow-sm ${
+                  style={{ "--col": i % 2 } as CSSProperties}
+                  className={`settle p-8 sm:p-12 rounded shadow-sm ${
                     isLarge
                       ? "col-span-full md:col-span-7 gradient-left"
                       : "col-span-full md:col-span-5 gradient-right"

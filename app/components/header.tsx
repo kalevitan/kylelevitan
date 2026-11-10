@@ -35,7 +35,9 @@ export const Header = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{
                     opacity: 1,
-                    y: [0, -8, 0],
+                    // null = start from the current value (initial y: 20), so the
+                    // CTA rises from where it faded in instead of snapping to 0.
+                    y: [null, -8, 0],
                   }}
                   transition={{
                     opacity: { duration: 0.6, delay: 0.3, ease: "easeOut" },
@@ -51,8 +53,9 @@ export const Header = () => {
                     className="header__cta__link"
                     onClick={(e) => {
                       e.preventDefault();
+                      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
                       document.getElementById('portfolio')?.scrollIntoView({
-                        behavior: 'smooth'
+                        behavior: reduceMotion ? 'auto' : 'smooth'
                       });
                     }}
                   >

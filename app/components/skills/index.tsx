@@ -1,4 +1,5 @@
 "use client";
+import type { CSSProperties } from "react";
 import skillsData from "./skills.json";
 import { LucideProps, Layout, Server, Code2, Sparkles } from "lucide-react";
 
@@ -48,9 +49,10 @@ They represent how I think about building modern software, from interface design
       <div className="layout xl:!col-span-3 xl:mx-40 2xl:mx-60 mx-0 !px-0">
         <section aria-label="Skills Categories">
           <div className="skills__content grid gap-6 grid-cols-1 md:grid-cols-12 max-w-[1472px] m-auto">
-            {skills.skills.map((credential) => (
+            {skills.skills.map((credential, index) => (
               <div
-                className={`skills__list flex flex-col p-8 sm:p-12 shadow-sm border-spacing-2 rounded items-start gap-6 ${
+                style={{ "--col": index % 2 } as CSSProperties}
+                className={`skills__list settle flex flex-col p-8 sm:p-12 shadow-sm border-spacing-2 rounded items-start gap-6 ${
                   credential.grid == "large"
                     ? "col-span-full md:col-span-7 gradient-left"
                     : "col-span-full md:col-span-5 gradient-right"

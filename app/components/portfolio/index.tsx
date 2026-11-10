@@ -1,4 +1,5 @@
 "use client";
+import type { CSSProperties } from "react";
 import dynamic from "next/dynamic";
 import projects from "@/app/components/portfolio/projects.json";
 
@@ -26,9 +27,14 @@ const Portfolio = () => {
           <ul
             className="portfolio__list grid gap-14 mb-8 list-none"
             role="list"
+            style={{ "--count": projects.length } as CSSProperties}
           >
             {projects?.map((project, index) => (
-              <li className="project sm:contents" key={project.name || index}>
+              <li
+                className="project sm:contents"
+                key={project.name || index}
+                style={{ "--index": index + 1 } as CSSProperties}
+              >
                 <Project
                   name={project.name}
                   type={project.type}

@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { ArrowRight } from "lucide-react";
 import { MediumPost, MEDIUM_PROFILE } from "@/app/lib/medium";
 
@@ -28,7 +29,11 @@ const Writing = ({ posts }: { posts: MediumPost[] }) => {
         <section aria-label="Recent articles">
           <ul className="writing__list grid gap-6 grid-cols-1 md:grid-cols-3 max-w-[1472px] m-auto list-none p-0">
             {posts.map((post, index) => (
-              <li className="flex" key={post.link}>
+              <li
+                className="settle flex"
+                key={post.link}
+                style={{ "--col": index % 3 } as CSSProperties}
+              >
                 <a
                   className="flex w-full text-inherit no-underline hover:filter-none"
                   href={post.link}

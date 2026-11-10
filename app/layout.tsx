@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Viewport } from 'next'
 import { Source_Sans_3, Roboto_Slab } from 'next/font/google';
-import { LazyMotion, domAnimation } from "motion/react"
+import { LazyMotion, MotionConfig, domAnimation } from "motion/react"
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SEO_CONFIG, generateStructuredData, generateWebsiteStructuredData } from '@/app/lib/seo';
 import 'lineicons/dist/lineicons.css';
@@ -135,9 +135,13 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning>
-        <LazyMotion features={domAnimation}>
-          {children}
-        </LazyMotion>
+        {/* reducedMotion="user": Motion drops transform animations (keeping
+            fades) for visitors who prefer reduced motion, matching the CSS. */}
+        <MotionConfig reducedMotion="user">
+          <LazyMotion features={domAnimation}>
+            {children}
+          </LazyMotion>
+        </MotionConfig>
         <GoogleAnalytics gaId="G-GWV3Q55NPY" />
       </body>
     </html>

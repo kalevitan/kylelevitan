@@ -84,7 +84,7 @@ const Project = ({
                 <Link
                   href={caseStudyHref}
                   aria-label={`Read the ${name} case study`}
-                  className="hover:filter-none hover:scale-105 transition-transform duration-200 ease-in-out"
+                  className="hover:filter-none motion-safe:hover:scale-105 transition-transform duration-200 ease-in-out"
                 >
                   <Image
                     src={image}
@@ -101,7 +101,7 @@ const Project = ({
                   target={link ? "_blank" : undefined}
                   rel={link ? "noopener noreferrer" : undefined}
                   aria-label={`View ${name} project`}
-                  className="hover:filter-none hover:scale-105 transition-transform duration-200 ease-in-out"
+                  className="hover:filter-none motion-safe:hover:scale-105 transition-transform duration-200 ease-in-out"
                 >
                   <Image
                     src={image}

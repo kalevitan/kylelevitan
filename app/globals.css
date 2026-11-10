@@ -67,10 +67,6 @@ body {
   box-shadow: none;
 }
 
-.header__cta__link:hover {
-  color: #a83242;
-}
-
 .header__cta__text {
   font-family: var(--font-source-sans-3);
 }
@@ -79,8 +75,14 @@ body {
   transition: transform 0.2s ease;
 }
 
-.header__cta__link:hover .header__cta__icon {
-  transform: translateY(1px);
+@media (hover: hover) {
+  .header__cta__link:hover {
+    color: #a83242;
+  }
+
+  .header__cta__link:hover .header__cta__icon {
+    transform: translateY(1px);
+  }
 }
 
 @media (min-width: 768px) {
@@ -167,15 +169,18 @@ a {
   display: block;
   text-decoration: underline;
   transition: all 0.15s ease-in;
-  &:hover {
-    filter: brightness(120%);
-  }
 }
 
 button,
 button:focus {
   transition: all 0.15s ease-in;
-  &:hover {
+}
+
+/* Hover-capable pointers only (matching Tailwind's hoverOnlyWhenSupported), so
+   a tap on a phone doesn't leave links and buttons stuck brightened. */
+@media (hover: hover) {
+  a:hover,
+  button:hover {
     filter: brightness(120%);
   }
 }
@@ -257,10 +262,13 @@ footer:not(article footer) {
 
 /* Sweep the gradient around to trade corners, echoing the way alternating
    portfolio slides mirror each other. --angle is registered below, which is
-   what makes it animatable - a plain linear-gradient can't transition. */
-.gradient-left:hover,
-.gradient-right:hover {
-  --angle: 315deg;
+   what makes it animatable - a plain linear-gradient can't transition.
+   Hover-capable pointers only, so a tap on a phone doesn't leave it stuck. */
+@media (hover: hover) {
+  .gradient-left:hover,
+  .gradient-right:hover {
+    --angle: 315deg;
+  }
 }
 
 .gradient-left {
@@ -289,6 +297,78 @@ footer:not(article footer) {
   }
 }
 
+/* Scroll-driven card motion
+   ------------------------------------------------------------------------
+   One vocabulary for every card group on the site:
+   - Settle: cards rise and fade into place as they scroll in. Used by
+     .settle cards (competencies, writing, case-study highlights) at every
+     width, and by portfolio slides below 768px, where they don't stack.
+   - Recede: from 768px up, portfolio slides are sticky and stack, so instead
+     each one shrinks slightly as the next slides over it.
+   Only transform/opacity animate, so the hover gradient sweep (--angle) is
+   untouched. Everything is skipped for reduced motion and for browsers
+   without scroll-driven animations, which get the static layout.
+   The recede rule must stay below the settle rule: both match
+   .portfolio__slide at the same specificity, and the later one wins. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    /* Ranges stay inside `entry` (which ends once the card is fully in view)
+       so the animation always completes - a `cover` end point can't be
+       reached by cards near the bottom of the page, which run out of scroll
+       and get left mid-animation. */
+    .settle,
+    .portfolio__slide {
+      animation: card-settle linear both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 80%;
+    }
+
+    @media (min-width: 768px) {
+      /* Cards sharing a row arrive left to right. --col is the card's
+         0-based column, set inline by each component; the max (col 2) ends
+         exactly at entry 100%. */
+      .settle {
+        animation-range:
+          entry calc(10% + var(--col, 0) * 15%)
+          entry calc(80% + var(--col, 0) * 10%);
+      }
+
+      /* The recede timeline lives on the list rather than on each slide: a
+         stuck sticky element stops moving in the viewport, so its own view()
+         progress is unreliable. Each slide gets an equal slice of the list's
+         exit-crossing range, keyed off --index/--count set inline in
+         portfolio/index.tsx (sibling-index() won't work - every article is an
+         only child of its li). */
+      .portfolio__list {
+        view-timeline: --portfolio block;
+      }
+
+      .portfolio__slide {
+        transform-origin: 50% 0;
+        animation: portfolio-recede linear both;
+        animation-timeline: --portfolio;
+        animation-range:
+          exit-crossing calc((var(--index) - 1) / var(--count) * 100%)
+          exit-crossing calc(var(--index) / var(--count) * 100%);
+      }
+    }
+  }
+}
+
+@keyframes card-settle {
+  from {
+    opacity: 0.4;
+    transform: translateY(3rem) scale(0.96);
+  }
+}
+
+/* Earlier slides end up smaller; the last one stays at full size. */
+@keyframes portfolio-recede {
+  to {
+    transform: scale(calc(1 - (var(--count) - var(--index)) * 0.03));
+  }
+}
+
 .skills__specs,
 .portfolio__details {
   li {
@@ -303,7 +383,13 @@ footer:not(article footer) {
       hsl(178.59deg 34.98% 47.65% / 8%) 0%,
       hsl(358.59deg 34.98% 57.65% / 8%) 100%
     );
-  animation: rotate 8s ease-in-out infinite;
+}
+
+/* An endless loop is exactly what reduced motion asks us to drop. */
+@media (prefers-reduced-motion: no-preference) {
+  .animated-gradient {
+    animation: rotate 8s ease-in-out infinite;
+  }
 }
 
 @keyframes rotate {
